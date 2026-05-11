@@ -119,3 +119,9 @@ document.querySelectorAll('#featured .fade-in').forEach(el => {
 
     // Pi deficiency toggle is handled via inline onclick in HTML
 })();
+
+// ===== Auto-update copyright year =====
+(function() {
+    var el = document.getElementById('copyrightYear');
+    if (el) el.textContent = new Date().getFullYear();
+})();
