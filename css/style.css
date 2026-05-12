@@ -615,6 +615,43 @@ a:hover {
     border-top: 1px solid var(--border);
 }
 
+.key-figures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.key-figure {
+    margin: 0;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.key-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+}
+
+.key-figure figcaption {
+    font-size: 0.75rem;
+    line-height: 1.45;
+    color: var(--text);
+    padding: 10px 12px;
+    background: var(--off-white);
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 720px) {
+    .key-figures {
+        grid-template-columns: 1fr;
+    }
+}
+
 a.card-tag-link {
     text-decoration: none;
     transition: background var(--transition), color var(--transition);
