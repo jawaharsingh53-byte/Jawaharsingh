@@ -713,6 +713,34 @@ a:hover {
     margin: 24px 0;
 }
 
+/* Static graphical abstract figure inside research row */
+.abstract-figure {
+    margin: 28px 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.abstract-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.abstract-figure figcaption {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text);
+    padding: 14px 22px;
+    background: var(--off-white);
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
 /* ===== Key Figures (reused inside rows) ===== */
 .key-figures-full {
     margin-top: 48px;
