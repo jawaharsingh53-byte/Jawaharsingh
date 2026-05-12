@@ -2022,6 +2022,27 @@ a.card-tag-link:hover {
     gap: 20px;
 }
 
+/* Section-level full-width takeaway sits at end of Research Highlights */
+.key-takeaway-full {
+    max-width: none;
+    margin-top: 48px;
+    padding: 28px 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.key-takeaway-full .takeaway-text {
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+    .key-takeaway-full .takeaway-text {
+        white-space: normal;
+        font-size: 1.0rem;
+    }
+}
+
 .takeaway-icon {
     width: 40px;
     height: 40px;
