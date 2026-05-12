@@ -576,6 +576,16 @@ a:hover {
     border-radius: 4px;
 }
 
+a.card-tag-link {
+    text-decoration: none;
+    transition: background var(--transition), color var(--transition);
+}
+
+a.card-tag-link:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
 /* ===== Publications ===== */
 .pub-list {
     max-width: 800px;
