@@ -2038,11 +2038,11 @@ a.card-tag-link:hover {
     gap: 20px;
 }
 
-/* Section-level full-width takeaway sits at end of Research Highlights */
+/* Section-level full-width takeaway -- now sits inside the research card */
 .key-takeaway-full {
     max-width: none;
-    margin-top: 48px;
-    padding: 28px 40px;
+    margin: 32px 0 8px;
+    padding: 24px 36px;
     justify-content: center;
     text-align: center;
 }
