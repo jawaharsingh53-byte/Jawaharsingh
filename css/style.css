@@ -635,6 +635,10 @@ a:hover {
     gap: 28px;
 }
 
+.key-figure-wide {
+    grid-column: 1 / -1;
+}
+
 .key-figure {
     margin: 0;
     background: #ffffff;
