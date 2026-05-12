@@ -1,0 +1,204 @@
+/* ===== Publications page styles ===== */
+
+.pub-header {
+    padding: 130px 0 60px;
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--accent-light) 100%);
+    text-align: center;
+}
+
+.pub-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pub-page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    color: var(--dark);
+    margin-bottom: 14px;
+    letter-spacing: -1px;
+}
+
+.pub-page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 720px;
+    margin: 0 auto 28px;
+    line-height: 1.65;
+}
+
+.pub-page-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pub-page {
+    padding: 60px 0 100px;
+}
+
+/* Year section */
+.pub-year-section {
+    margin-bottom: 64px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.pub-year-section:last-child {
+    border-bottom: none;
+}
+
+.pub-year-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: var(--primary);
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+.pub-cat-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin: 32px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.pub-year-section > .pub-cat-title:first-of-type {
+    margin-top: 8px;
+}
+
+/* Entry */
+.pub-entry {
+    margin-bottom: 20px;
+    padding: 18px 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.pub-entry:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-1px);
+}
+
+.pub-entry-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: var(--dark);
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.pub-entry-authors {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: 0 0 6px;
+    line-height: 1.5;
+}
+
+.pub-entry-venue {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0 0 8px;
+}
+
+.pub-entry-summary {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.65;
+    margin: 12px 0 12px;
+}
+
+.pub-entry-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.pub-entry-links a {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+}
+
+.pub-entry-links a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.pub-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--accent-light);
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.3px;
+}
+
+.pub-tag-first {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Figured entry (with thumbnail) */
+.pub-entry-figured {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.pub-entry-thumb {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--white);
+}
+
+.pub-entry-thumb a {
+    display: block;
+    line-height: 0;
+}
+
+.pub-entry-thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition);
+}
+
+.pub-entry-thumb:hover img {
+    transform: scale(1.02);
+}
+
+@media (max-width: 720px) {
+    .pub-entry-figured {
+        grid-template-columns: 1fr;
+    }
+    .pub-year-title {
+        font-size: 2rem;
+    }
+}
+
+/* Active nav link */
+.nav-links a.active {
+    color: var(--primary);
+    background: var(--accent-light);
+}
