@@ -944,6 +944,35 @@ a.card-tag-link:hover {
     line-height: 1.5;
 }
 
+.pub-title a {
+    color: var(--dark);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.pub-title a:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.pub-doi {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin: 6px 0 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.pub-doi a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.pub-doi a:hover {
+    color: var(--primary);
+}
+
 .pub-journal {
     font-size: 0.9rem;
     color: var(--text-light);
