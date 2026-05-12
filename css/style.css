@@ -804,7 +804,7 @@ a:hover {
 
 .key-figures {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 28px;
     align-items: start;
 }
@@ -813,10 +813,26 @@ a:hover {
     grid-column: 1 / -1;
 }
 
-/* Keep figure heights roughly visually balanced when aspect ratios differ */
-.key-figure img {
-    max-height: 640px;
+/* Banner figure keeps natural aspect */
+.key-figure-wide img {
+    max-height: 420px;
     object-fit: contain;
+}
+
+/* Non-banner figures share an identical fixed image area so the two
+   side-by-side panels have visually matching height + width */
+.key-figure:not(.key-figure-wide) a {
+    display: block;
+    width: 100%;
+    height: 520px;
+    background: #ffffff;
+}
+
+.key-figure:not(.key-figure-wide) img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #ffffff;
 }
 
 .key-figure {
