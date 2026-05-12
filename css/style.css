@@ -687,12 +687,24 @@ a:hover {
 
 .research-row-figures-heading {
     font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--dark);
     text-align: center;
-    margin: 32px 0 20px;
-    letter-spacing: -0.2px;
+    margin: 40px 0 24px;
+    letter-spacing: -0.3px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.research-row-figures-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--primary);
+    margin: 12px auto 0;
+    border-radius: 1px;
 }
 
 .research-row-footer {
@@ -792,12 +804,19 @@ a:hover {
 
 .key-figures {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
     gap: 28px;
+    align-items: start;
 }
 
 .key-figure-wide {
     grid-column: 1 / -1;
+}
+
+/* Keep figure heights roughly visually balanced when aspect ratios differ */
+.key-figure img {
+    max-height: 640px;
+    object-fit: contain;
 }
 
 .key-figure {
