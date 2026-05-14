@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://jawaharsingh.com/</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://jawaharsingh.com/images/headshot.png</image:loc>
+      <image:title>Dr Jawahar Singh — Postdoctoral Research Associate, Sainsbury Laboratory, Cambridge</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jawaharsingh.com/images/phosphate_nodulation_abstract.jpg</image:loc>
+      <image:title>Graphical abstract: PHR-L7 controls NIN expression and nodulation under phosphate deficiency</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jawaharsingh.com/images/phosphate_nodulation_fig.jpg</image:loc>
+      <image:title>PvPHR-L7 RNAi/over-expression nodulation phenotype in Phaseolus vulgaris (Singh et al. 2025, Plant Cell Physiol)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jawaharsingh.com/images/phr_emsa_fig.jpg</image:loc>
+      <image:title>EMSA: PvPHR-L7 binds P1BS cis-element in PvNIN and PvTML promoters (Singh et al. 2025)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jawaharsingh.com/images/phr_transactivation_figS8.jpg</image:loc>
+      <image:title>PvPHR-L7 transactivates PvNIN and PvTML in N. benthamiana leaves (Singh et al. 2025)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://jawaharsingh.com/publications.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://jawaharsingh.com/images/ca_lysmrlk_phenotype.jpg</image:loc>
+      <image:title>CaNFP-RNAi and CaLYK3-RNAi reduce chickpea nodulation (Singh &amp; Verma 2022, EBE)</image:title>
+    </image:image>
   </url>
 </urlset>

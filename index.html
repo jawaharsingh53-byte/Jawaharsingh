@@ -42,65 +42,157 @@
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c2b40b963024a48b41af28e77da9bd5"}'></script>
     <!-- End Cloudflare Web Analytics -->
 
-    <!-- Structured data: Person schema for Google Knowledge Graph -->
+    <!-- Structured data: Person + WebSite + ProfilePage + select ScholarlyArticles -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jawahar Singh",
-      "honorificSuffix": "Ph.D.",
-      "givenName": "Jawahar",
-      "familyName": "Singh",
-      "url": "https://jawaharsingh.com/",
-      "image": "https://jawaharsingh.com/images/headshot.png",
-      "jobTitle": "Postdoctoral Research Associate",
-      "email": "mailto:Jawahar.Singh@slcu.cam.ac.uk",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Sainsbury Laboratory, University of Cambridge",
-        "url": "https://www.slcu.cam.ac.uk/"
-      },
-      "alumniOf": [
+      "@graph": [
         {
-          "@type": "CollegeOrUniversity",
-          "name": "National Institute of Plant Genome Research (NIPGR)",
-          "address": "New Delhi, India"
+          "@type": "Person",
+          "@id": "https://jawaharsingh.com/#person",
+          "name": "Jawahar Singh",
+          "honorificSuffix": "Ph.D.",
+          "givenName": "Jawahar",
+          "familyName": "Singh",
+          "url": "https://jawaharsingh.com/",
+          "image": "https://jawaharsingh.com/images/headshot.png",
+          "jobTitle": "Postdoctoral Research Associate",
+          "email": "mailto:Jawahar.Singh@slcu.cam.ac.uk",
+          "telephone": "+44-7881033804",
+          "nationality": {"@type": "Country", "name": "India"},
+          "knowsLanguage": ["en", "hi"],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Plant Molecular Biologist",
+            "occupationLocation": {"@type": "City", "name": "Cambridge, UK"},
+            "skills": "Root nodule symbiosis, phosphate signalling, CRISPR-Cas9, single-cell transcriptomics, legume genomics"
+          },
+          "affiliation": {
+            "@type": "Organization",
+            "name": "Sainsbury Laboratory, University of Cambridge",
+            "url": "https://www.slcu.cam.ac.uk/"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Sainsbury Laboratory, University of Cambridge",
+            "url": "https://www.slcu.cam.ac.uk/",
+            "address": {"@type": "PostalAddress", "streetAddress": "47 Bateman Street", "addressLocality": "Cambridge", "postalCode": "CB2 1LR", "addressCountry": "GB"}
+          },
+          "memberOf": [
+            {"@type": "Organization", "name": "International Society for Molecular Plant-Microbe Interactions (IS-MPMI)"},
+            {"@type": "Organization", "name": "ENSA (Enabling Nutrient Symbioses in Agriculture)"}
+          ],
+          "award": [
+            "DGAPA Postdoctoral Fellowship, UNAM (2022-2023)",
+            "Senior Research Fellowship (SRF), CSIR-Government of India (2018-2021)",
+            "Junior Research Fellowship (JRF), UGC-Government of India (2016-2018)",
+            "Swachhta Saarthi Fellowship, Office of the Principal Scientific Adviser, Government of India (2021)"
+          ],
+          "alumniOf": [
+            {"@type": "CollegeOrUniversity", "name": "National Institute of Plant Genome Research (NIPGR)", "address": "New Delhi, India"},
+            {"@type": "CollegeOrUniversity", "name": "Universidad Nacional Autónoma de México (UNAM)", "address": "Mexico City, Mexico"},
+            {"@type": "CollegeOrUniversity", "name": "Jai Narain Vyas University (JNVU)", "address": "Jodhpur, India"},
+            {"@type": "CollegeOrUniversity", "name": "West Bengal State University", "address": "Kolkata, India"}
+          ],
+          "knowsAbout": [
+            "Root nodule symbiosis", "Biological nitrogen fixation", "Phosphate signalling",
+            "CRISPR-Cas9 genome editing", "Legume genomics", "Plant-microbe interactions",
+            "Cowpea", "Soybean", "Chickpea", "Common bean", "Pearl millet", "Sustainable agriculture",
+            "Nod factor signalling", "LysM receptor-like kinases", "PHR transcription factors",
+            "NIN master regulator", "AON autoregulation of nodulation", "Single-cell transcriptomics"
+          ],
+          "description": "Plant molecular biologist decoding how legumes form nitrogen-fixing root nodules and engineering enhanced nitrogen fixation in cowpea and soybean. First report that a PHR transcription factor directly regulates the master nodulation gene NIN (Singh et al. Plant Cell Physiol. 2025).",
+          "sameAs": [
+            "https://scholar.google.com/citations?user=mANYUGQAAAAJ&hl=en",
+            "https://orcid.org/0000-0003-4893-741X",
+            "https://www.linkedin.com/in/jawahar-singh-phd-57892068/",
+            "https://twitter.com/IamJawaharSingh",
+            "https://www.slcu.cam.ac.uk/people/jawahar-singh",
+            "https://www.researchgate.net/profile/Jawahar-Singh",
+            "https://www.ensa.ac.uk/team/jawahar-singh/"
+          ]
         },
         {
-          "@type": "CollegeOrUniversity",
-          "name": "Universidad Nacional Autónoma de México (UNAM)",
-          "address": "Mexico City, Mexico"
+          "@type": "WebSite",
+          "@id": "https://jawaharsingh.com/#website",
+          "url": "https://jawaharsingh.com/",
+          "name": "Jawahar Singh, Ph.D.",
+          "description": "Personal academic site of Dr Jawahar Singh — plant molecular biologist at the Sainsbury Laboratory, University of Cambridge.",
+          "publisher": {"@id": "https://jawaharsingh.com/#person"},
+          "inLanguage": "en-GB"
         },
         {
-          "@type": "CollegeOrUniversity",
-          "name": "Jai Narain Vyas University (JNVU)",
-          "address": "Jodhpur, India"
+          "@type": "ProfilePage",
+          "@id": "https://jawaharsingh.com/#profilepage",
+          "url": "https://jawaharsingh.com/",
+          "name": "Jawahar Singh, Ph.D. — Profile",
+          "mainEntity": {"@id": "https://jawaharsingh.com/#person"},
+          "isPartOf": {"@id": "https://jawaharsingh.com/#website"}
         },
         {
-          "@type": "CollegeOrUniversity",
-          "name": "West Bengal State University",
-          "address": "Kolkata, India"
+          "@type": "ScholarlyArticle",
+          "headline": "Beyond Nitrogen: Phosphate Controls Root Nodule Symbiosis Commitment",
+          "author": [
+            {"@id": "https://jawaharsingh.com/#person"},
+            {"@type": "Person", "name": "Oswaldo Valdés-López"},
+            {"@type": "Person", "name": "Sebastian Schornack"}
+          ],
+          "datePublished": "2026",
+          "isPartOf": {"@type": "Periodical", "name": "Trends in Plant Science", "issn": "1360-1385"},
+          "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1016/j.tplants.2026.01.001"},
+          "url": "https://doi.org/10.1016/j.tplants.2026.01.001"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "headline": "Phosphate deficiency reduces nodule formation through a phosphate starvation response-like protein in Phaseolus vulgaris",
+          "author": [
+            {"@id": "https://jawaharsingh.com/#person"},
+            {"@type": "Person", "name": "Ana Belén Mendoza-Soto"},
+            {"@type": "Person", "name": "Manish Tiwari"},
+            {"@type": "Person", "name": "Oswaldo Valdés-López"}
+          ],
+          "datePublished": "2025",
+          "isPartOf": {"@type": "Periodical", "name": "Plant and Cell Physiology", "issn": "0032-0781"},
+          "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1093/pcp/pcaf069"},
+          "url": "https://doi.org/10.1093/pcp/pcaf069"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "headline": "Genome-wide identification, expression, and characterization of CaLysM-RLKs in chickpea root nodule symbiosis",
+          "author": [
+            {"@id": "https://jawaharsingh.com/#person"},
+            {"@type": "Person", "name": "Praveen Kumar Verma"}
+          ],
+          "datePublished": "2022",
+          "isPartOf": {"@type": "Periodical", "name": "Environmental and Experimental Botany", "issn": "0098-8472"},
+          "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1016/j.envexpbot.2022.104999"},
+          "url": "https://doi.org/10.1016/j.envexpbot.2022.104999"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "headline": "Harnessing the potential of symbiotic associations of plants in phosphate-deficient soil for sustainable agriculture",
+          "author": [
+            {"@id": "https://jawaharsingh.com/#person"},
+            {"@type": "Person", "name": "Mariel C. Isidra-Arellano"},
+            {"@type": "Person", "name": "Oswaldo Valdés-López"}
+          ],
+          "datePublished": "2023",
+          "isPartOf": {"@type": "Periodical", "name": "Plant and Cell Physiology", "issn": "0032-0781"},
+          "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1093/pcp/pcad059"},
+          "url": "https://doi.org/10.1093/pcp/pcad059"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "headline": "Discovering the genetic modules controlling root nodule symbiosis under abiotic stresses: salinity as a case study",
+          "author": [
+            {"@id": "https://jawaharsingh.com/#person"},
+            {"@type": "Person", "name": "Oswaldo Valdés-López"}
+          ],
+          "datePublished": "2023",
+          "isPartOf": {"@type": "Periodical", "name": "New Phytologist", "issn": "0028-646X"},
+          "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.1111/nph.18627"},
+          "url": "https://doi.org/10.1111/nph.18627"
         }
-      ],
-      "knowsAbout": [
-        "Root nodule symbiosis",
-        "Biological nitrogen fixation",
-        "Phosphate signalling",
-        "CRISPR-Cas9 genome editing",
-        "Legume genomics",
-        "Plant-microbe interactions",
-        "Cowpea",
-        "Soybean",
-        "Chickpea",
-        "Sustainable agriculture"
-      ],
-      "description": "Plant molecular biologist decoding how legumes form nitrogen-fixing root nodules and engineering enhanced nitrogen fixation in cowpea and soybean.",
-      "sameAs": [
-        "https://scholar.google.com/citations?user=mANYUGQAAAAJ&hl=en",
-        "https://orcid.org/0000-0003-4893-741X",
-        "https://www.linkedin.com/in/jawahar-singh-phd-57892068/",
-        "https://twitter.com/IamJawaharSingh",
-        "https://www.slcu.cam.ac.uk/people/jawahar-singh"
       ]
     }
     </script>
