@@ -355,6 +355,73 @@ a.stat-item-link:hover .stat-label {
     color: #ffffff;
 }
 
+/* Reveal-on-tap/hover stat items (Countries, Crop Species) */
+.stat-item-reveal {
+    position: relative;
+    cursor: pointer;
+    padding: 8px 0;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition);
+    outline: none;
+}
+
+.stat-item-reveal:hover,
+.stat-item-reveal:focus {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.stat-item-reveal:hover .stat-number,
+.stat-item-reveal:focus .stat-number {
+    color: #5eead4;
+}
+
+.stat-popover {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%) translateY(6px);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 170px;
+    padding: 12px 16px;
+    background: #ffffff;
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+    z-index: 20;
+}
+
+.stat-popover::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 7px solid transparent;
+    border-top-color: #ffffff;
+}
+
+.stat-item-reveal:hover .stat-popover,
+.stat-item-reveal:focus .stat-popover,
+.stat-item-reveal:focus-within .stat-popover,
+.stat-item-reveal.active .stat-popover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.stat-item-reveal.active .stat-number {
+    color: #5eead4;
+}
+
 /* ===== Buttons ===== */
 .btn {
     display: inline-block;

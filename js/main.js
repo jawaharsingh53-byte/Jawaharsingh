@@ -125,3 +125,26 @@ document.querySelectorAll('#featured .fade-in').forEach(el => {
     var el = document.getElementById('copyrightYear');
     if (el) el.textContent = new Date().getFullYear();
 })();
+
+// ===== Stat reveal popovers (Countries / Crop Species) — tap to toggle =====
+(function() {
+    var reveals = document.querySelectorAll('.stat-item-reveal');
+    reveals.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var wasActive = item.classList.contains('active');
+            reveals.forEach(function(r) { r.classList.remove('active'); });
+            if (!wasActive) item.classList.add('active');
+        });
+        item.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                item.click();
+            }
+        });
+    });
+    // Close popovers when clicking elsewhere
+    document.addEventListener('click', function() {
+        reveals.forEach(function(r) { r.classList.remove('active'); });
+    });
+})();

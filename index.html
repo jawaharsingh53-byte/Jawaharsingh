@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20260514">
 
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c2b40b963024a48b41af28e77da9bd5"}'></script>
@@ -248,13 +248,24 @@
                     <span class="stat-number">35+</span>
                     <span class="stat-label">Publications &rarr;</span>
                 </a>
-                <div class="stat-item">
+                <div class="stat-item stat-item-reveal" tabindex="0" role="button" aria-label="Research across 3 countries: India, Mexico, United Kingdom">
                     <span class="stat-number">3</span>
-                    <span class="stat-label">Countries</span>
+                    <span class="stat-label">Countries &darr;</span>
+                    <div class="stat-popover">
+                        <span>&#127470;&#127475; India</span>
+                        <span>&#127474;&#127485; Mexico</span>
+                        <span>&#127468;&#127463; United Kingdom</span>
+                    </div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item stat-item-reveal" tabindex="0" role="button" aria-label="Work spanning 4 crop legumes: chickpea, common bean, soybean, cowpea">
                     <span class="stat-number">4</span>
-                    <span class="stat-label">Crop Species</span>
+                    <span class="stat-label">Crop Species &darr;</span>
+                    <div class="stat-popover">
+                        <span>Chickpea</span>
+                        <span>Common bean</span>
+                        <span>Soybean</span>
+                        <span>Cowpea</span>
+                    </div>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">10+</span>
@@ -672,6 +683,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=20260514"></script>
 </body>
 </html>
