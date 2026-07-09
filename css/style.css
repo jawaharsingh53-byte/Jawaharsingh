@@ -2305,6 +2305,11 @@ a.card-tag-link:hover {
     white-space: nowrap;
 }
 
+/* Latest/featured commentary takeaway: longer text, allow it to wrap inside the box */
+#latest .key-takeaway-full .takeaway-text {
+    white-space: normal;
+}
+
 @media (max-width: 1100px) {
     .key-takeaway-full .takeaway-text {
         white-space: normal;
