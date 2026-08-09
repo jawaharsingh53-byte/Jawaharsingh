@@ -35,13 +35,26 @@
     <link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <meta name="theme-color" content="#0d7377">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0d7377" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1013" media="(prefers-color-scheme: dark)">
+
+    <!-- Set theme before paint to avoid a flash of the wrong colour scheme -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
 
     <!-- Fonts & stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20260729">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260809">
 
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c2b40b963024a48b41af28e77da9bd5"}'></script>
@@ -215,27 +228,36 @@
     </script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Primary">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">JS</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#latest">Latest</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#future-lab">Future Lab</a></li>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#leadership">Community</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#latest">Latest</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#future-lab">Future Lab</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#leadership">Community</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme" title="Toggle light / dark">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                </button>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
+    <main id="main">
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg-pattern"></div>
@@ -448,12 +470,23 @@
             <h2 class="section-title">Selected Publications</h2>
 
             <div class="pub-list">
+                <div class="pub-item pub-item-flagship fade-in">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <p class="pub-flag">First author &middot; Primary research</p>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">Phosphate deficiency reduces nodule formation through a phosphate starvation response-like protein in <em>Phaseolus vulgaris</em></a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong>, Mendoza-Soto, A. B., Tiwari, M., et al. &middot; <em>Plant and Cell Physiology</em></p>
+                        <p class="pub-impact">First evidence that a PHR transcription factor directly binds the <em>NIN</em> promoter &mdash; establishing phosphate as a checkpoint for nodulation commitment</p>
+                        <p class="pub-doi"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcaf069</a></p>
+                    </div>
+                </div>
+
                 <div class="pub-item fade-in">
                     <span class="pub-year">2026</span>
                     <div class="pub-details">
-                        <h4>Tiwari, R. &amp; <strong>Singh, J.</strong></h4>
-                        <p class="pub-title"><a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener">Secretory Circuits of Symbiosis in <em>Medicago truncatula</em></a></p>
-                        <p class="pub-impact">Commentary in <em>MPMI</em> &mdash; how legumes hardwire the secretory machinery (signal peptidase complex) into the nodule program via a newly defined <em>cis</em>-element, SOLE, with NIN as candidate regulator</p>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener">Secretory Circuits of Symbiosis in <em>Medicago truncatula</em></a></h3>
+                        <p class="pub-authors">Tiwari, R. &amp; <strong>Singh, J.</strong> &middot; <em>Molecular Plant-Microbe Interactions</em></p>
+                        <p class="pub-impact">Commentary &mdash; how legumes hardwire the secretory machinery (signal peptidase complex) into the nodule program via a newly defined <em>cis</em>-element, SOLE, with NIN as candidate regulator</p>
                         <p class="pub-doi"><a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-06-26-0051-CM</a></p>
                     </div>
                 </div>
@@ -461,28 +494,18 @@
                 <div class="pub-item fade-in">
                     <span class="pub-year">2026</span>
                     <div class="pub-details">
-                        <h4><strong>Singh, J.</strong>, Vald&eacute;s-L&oacute;pez, O., &amp; Schornack, S.</h4>
-                        <p class="pub-title"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">Beyond Nitrogen: Phosphate Controls Root Nodule Symbiosis Commitment</a></p>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">Beyond Nitrogen: Phosphate Controls Root Nodule Symbiosis Commitment</a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong>, Vald&eacute;s-L&oacute;pez, O., &amp; Schornack, S. &middot; <em>Trends in Plant Science</em></p>
                         <p class="pub-impact">Perspective article defining the phosphate-nodulation paradigm</p>
                         <p class="pub-doi"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">doi.org/10.1016/j.tplants.2026.01.001</a></p>
                     </div>
                 </div>
 
                 <div class="pub-item fade-in">
-                    <span class="pub-year">2025</span>
-                    <div class="pub-details">
-                        <h4><strong>Singh, J.</strong>, Mendoza-Soto, A. B., Tiwari, M., et al.</h4>
-                        <p class="pub-title"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">Phosphate deficiency reduces nodule formation through a phosphate starvation response-like protein in <em>Phaseolus vulgaris</em></a></p>
-                        <p class="pub-impact">First evidence of PHR1 directly binding the NIN promoter</p>
-                        <p class="pub-doi"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcaf069</a></p>
-                    </div>
-                </div>
-
-                <div class="pub-item fade-in">
                     <span class="pub-year">2023</span>
                     <div class="pub-details">
-                        <h4><strong>Singh, J.</strong>, Isidra-Arellano, M.C., &amp; Vald&eacute;s-L&oacute;pez, O.</h4>
-                        <p class="pub-title"><a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener">Harnessing the potential of symbiotic associations of plants in phosphate-deficient soil for sustainable agriculture</a></p>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener">Harnessing the potential of symbiotic associations of plants in phosphate-deficient soil for sustainable agriculture</a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong>, Isidra-Arellano, M.C., &amp; Vald&eacute;s-L&oacute;pez, O. &middot; <em>Plant and Cell Physiology</em></p>
                         <p class="pub-impact">Review on symbiotic strategies for phosphate-poor soils</p>
                         <p class="pub-doi"><a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcad059</a></p>
                     </div>
@@ -491,8 +514,8 @@
                 <div class="pub-item fade-in">
                     <span class="pub-year">2023</span>
                     <div class="pub-details">
-                        <h4><strong>Singh, J.</strong> &amp; Verma, P. K.</h4>
-                        <p class="pub-title"><a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener">Role of Nod factor receptors and its allies involved in nitrogen fixation</a></p>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener">Role of Nod factor receptors and its allies involved in nitrogen fixation</a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong> &amp; Verma, P. K. &middot; <em>Planta</em></p>
                         <p class="pub-impact">Review on Nod factor receptor signalling</p>
                         <p class="pub-doi"><a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener">doi.org/10.1007/s00425-023-04090-7</a></p>
                     </div>
@@ -501,8 +524,8 @@
                 <div class="pub-item fade-in">
                     <span class="pub-year">2023</span>
                     <div class="pub-details">
-                        <h4><strong>Singh, J.</strong> &amp; Vald&eacute;s-L&oacute;pez, O.</h4>
-                        <p class="pub-title"><a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener">Discovering the genetic modules controlling root nodule symbiosis under abiotic stresses: salinity as a case study</a></p>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener">Discovering the genetic modules controlling root nodule symbiosis under abiotic stresses: salinity as a case study</a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong> &amp; Vald&eacute;s-L&oacute;pez, O. &middot; <em>New Phytologist</em></p>
                         <p class="pub-impact">Framework for understanding symbiosis under environmental stress</p>
                         <p class="pub-doi"><a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener">doi.org/10.1111/nph.18627</a></p>
                     </div>
@@ -511,8 +534,8 @@
                 <div class="pub-item fade-in">
                     <span class="pub-year">2022</span>
                     <div class="pub-details">
-                        <h4><strong>Singh, J.</strong> &amp; Verma, P. K.</h4>
-                        <p class="pub-title"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">Genome-wide identification, expression, and characterization of CaLysM-RLKs in chickpea root nodule symbiosis</a></p>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">Genome-wide identification, expression, and characterization of CaLysM-RLKs in chickpea root nodule symbiosis</a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong> &amp; Verma, P. K. &middot; <em>Environmental and Experimental Botany</em></p>
                         <p class="pub-impact">Identified 17 LysM-RLKs governing Nod factor perception in chickpea</p>
                         <p class="pub-doi"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">doi.org/10.1016/j.envexpbot.2022.104999</a></p>
                     </div>
@@ -723,14 +746,14 @@
                     <div class="contact-item">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         <div>
-                            <h4>Email</h4>
+                            <h3>Email</h3>
                             <a href="mailto:Jawahar.Singh@slcu.cam.ac.uk">Jawahar.Singh@slcu.cam.ac.uk</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         <div>
-                            <h4>Address</h4>
+                            <h3>Address</h3>
                             <p>Sainsbury Laboratory<br>University of Cambridge<br>47 Bateman Street<br>Cambridge CB2 1LR, UK</p>
                         </div>
                     </div>
@@ -765,6 +788,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -773,6 +798,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=20260514"></script>
+    <script src="js/main.js?v=20260809"></script>
 </body>
 </html>

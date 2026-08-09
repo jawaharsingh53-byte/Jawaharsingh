@@ -2427,3 +2427,218 @@ a.card-tag-link:hover {
     }
 }
 
+/* =========================================================================
+   ADDITIONS (2026) — dark mode, focus system, hero discovery, CV,
+   publication flagship, accessibility & contrast fixes.
+   Layered on top of the existing teal design via variable overrides.
+   ========================================================================= */
+
+/* ---- Dark theme: remap the existing tokens ---- */
+:root[data-theme='dark'] {
+    color-scheme: dark;
+    --primary: #53d1c1;
+    --primary-dark: #74dccf;
+    --accent: #53d1c1;
+    --accent-light: #16302c;
+    --dark: #f1f3f6;          /* heading text (bands pinned separately below) */
+    --text: #e5e8ec;
+    --text-light: #a6adb6;
+    --white: #16181c;         /* page + card surfaces */
+    --off-white: #1c1f24;     /* section-alt + hero gradient */
+    --border: #2c3037;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* No-JS fallback: honour the system preference when the inline guard didn't run */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']):not([data-theme='dark']) {
+        color-scheme: dark;
+        --primary: #53d1c1;
+        --primary-dark: #74dccf;
+        --accent: #53d1c1;
+        --accent-light: #16302c;
+        --dark: #f1f3f6;
+        --text: #e5e8ec;
+        --text-light: #a6adb6;
+        --white: #16181c;
+        --off-white: #1c1f24;
+        --border: #2c3037;
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+        --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Dark: pin surfaces that must stay dark even though --dark flips to a light ink */
+:root[data-theme='dark'] .navbar { background: rgba(18, 20, 24, 0.9); }
+:root[data-theme='dark'] .hero-stats,
+:root[data-theme='dark'] .footer { background: #0e1013; }
+:root[data-theme='dark'] .stat-popover { background: #1c1f24; color: var(--text); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6); }
+:root[data-theme='dark'] .stat-popover::after { border-top-color: #1c1f24; }
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']):not([data-theme='dark']) .navbar { background: rgba(18, 20, 24, 0.9); }
+    :root:not([data-theme='light']):not([data-theme='dark']) .hero-stats,
+    :root:not([data-theme='light']):not([data-theme='dark']) .footer { background: #0e1013; }
+    :root:not([data-theme='light']):not([data-theme='dark']) .stat-popover { background: #1c1f24; color: var(--text); }
+    :root:not([data-theme='light']):not([data-theme='dark']) .stat-popover::after { border-top-color: #1c1f24; }
+}
+
+/* ---- Skip link ---- */
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    z-index: 2000;
+    transform: translateY(-120%);
+    padding: 10px 20px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 0 0 8px 8px;
+    transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    color: #fff;
+    outline: 3px solid var(--dark);
+    outline-offset: 2px;
+}
+
+/* ---- Focus system (was entirely missing) ---- */
+:where(a, button, [role='button'], [tabindex], input, select):focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.hero-stats :where(a, button, [role='button'], [tabindex]):focus-visible,
+.footer :where(a, button):focus-visible {
+    outline-color: #5eead4;
+}
+
+.stat-item-reveal:focus-visible {
+    outline: 3px solid #5eead4;
+    outline-offset: 2px;
+}
+
+/* ---- Nav additions: right cluster + theme toggle ---- */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.theme-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme='dark'] .theme-toggle .icon-sun { display: none; }
+:root[data-theme='dark'] .theme-toggle .icon-moon { display: block; }
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']):not([data-theme='dark']) .theme-toggle .icon-sun { display: none; }
+    :root:not([data-theme='light']):not([data-theme='dark']) .theme-toggle .icon-moon { display: block; }
+}
+
+/* ---- Hero bio lede: fill the same column width as the name/manifesto above it
+   so the block is uniform (was stepping inward at ~654px vs the 748px lines above) ---- */
+.hero-lede {
+    max-width: none;
+    line-height: 1.6;
+    text-wrap: pretty;          /* keeps full width; only prevents an orphan last word */
+}
+
+/* ---- Publications: title-as-heading + flagship highlight ---- */
+.pub-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.45;
+    margin: 0 0 4px;
+}
+
+.pub-authors {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0 0 4px;
+}
+
+.pub-authors strong { color: var(--text); font-weight: 700; }
+
+/* Fix AA contrast: impact line off #2a9d8f (3.32:1) onto the darker teal */
+.pub-impact { color: var(--primary); }
+
+.pub-flag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--white);
+    background: var(--primary);
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.pub-item-flagship {
+    background: var(--accent-light);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 20px 24px;
+}
+
+.pub-item-flagship:hover { padding-left: 24px; }
+.pub-item-flagship .pub-year { color: var(--primary); }
+
+/* ---- Contact headings promoted h4 -> h3 ---- */
+.contact-item h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+/* ---- Footer note: drop compounded opacity (contrast) ---- */
+.footer-note {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+/* ---- Mobile menu: remove hidden links from the tab order ---- */
+@media (max-width: 640px) {
+    .nav-links {
+        visibility: hidden;
+    }
+    .nav-links.active {
+        visibility: visible;
+    }
+}
+

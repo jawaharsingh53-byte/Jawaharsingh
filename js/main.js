@@ -1,150 +1,149 @@
-// ===== Navbar scroll effect =====
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
+// ===== Theme toggle (light / dark) =====
+(function () {
+    var root = document.documentElement;
+    var toggle = document.getElementById('themeToggle');
 
-// ===== Mobile nav toggle =====
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-
-navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
-
-// Close mobile nav on link click
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-    });
-});
-
-// ===== Active nav link on scroll =====
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY + 100;
-    sections.forEach(section => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        const id = section.getAttribute('id');
-        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-        if (link) {
-            link.classList.toggle('active', scrollY >= top && scrollY < top + height);
-        }
-    });
-});
-
-// ===== Fade-in on scroll (IntersectionObserver) =====
-const fadeElements = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            // Stagger animation for sibling elements
-            const siblings = entry.target.parentElement.querySelectorAll('.fade-in');
-            const siblingIndex = Array.from(siblings).indexOf(entry.target);
-            setTimeout(() => {
-                entry.target.classList.add('visible');
-            }, siblingIndex * 100);
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-fadeElements.forEach(el => observer.observe(el));
-
-// ===== Smooth scroll for all anchor links =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
-
-// ===== Featured Research: Accordion toggle =====
-document.querySelectorAll('.findings-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-
-        button.setAttribute('aria-expanded', !isExpanded);
-
-        if (isExpanded) {
-            content.classList.remove('open');
-            setTimeout(() => { content.hidden = true; }, 400);
-        } else {
-            content.hidden = false;
-            // Trigger reflow before adding class for transition
-            content.offsetHeight;
-            content.classList.add('open');
-        }
-    });
-});
-
-// ===== Re-observe new fade-in elements (Featured Research) =====
-document.querySelectorAll('#featured .fade-in').forEach(el => {
-    if (!el.classList.contains('visible')) {
-        observer.observe(el);
-    }
-});
-
-// ===== Interactive Graphical Abstract: Tooltip on hover =====
-(function() {
-    var tip = document.getElementById('abstractTooltip');
-    var container = document.querySelector('.interactive-abstract');
-
-    var nodes = document.querySelectorAll('.pathway-node[data-tooltip]');
-    for (var i = 0; i < nodes.length; i++) {
-        (function(node) {
-            node.onmouseenter = function() {
-                var text = node.getAttribute('data-tooltip');
-                if (!text || !tip || !container) return;
-                tip.textContent = text;
-                var cr = container.getBoundingClientRect();
-                var nr = node.getBoundingClientRect();
-                tip.style.left = (nr.left + nr.width / 2 - cr.left) + 'px';
-                tip.style.top = (nr.top - cr.top) + 'px';
-                tip.style.bottom = 'auto';
-                tip.classList.add('visible');
-            };
-            node.onmouseleave = function() {
-                if (tip) tip.classList.remove('visible');
-            };
-        })(nodes[i]);
+    function current() {
+        return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
     }
 
-    // Pi deficiency toggle is handled via inline onclick in HTML
+    function label() {
+        if (!toggle) return;
+        toggle.setAttribute('aria-label', current() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+
+    function apply(theme) {
+        root.setAttribute('data-theme', theme);
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        label();
+    }
+
+    if (toggle) {
+        label();
+        toggle.addEventListener('click', function () {
+            apply(current() === 'dark' ? 'light' : 'dark');
+        });
+    }
 })();
 
-// ===== Auto-update copyright year =====
-(function() {
-    var el = document.getElementById('copyrightYear');
-    if (el) el.textContent = new Date().getFullYear();
+// ===== Navbar shadow on scroll (passive, rAF-guarded) =====
+(function () {
+    var navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    var ticking = false;
+    function update() {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+        ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+})();
+
+// ===== Mobile nav toggle (exposes state to assistive tech) =====
+(function () {
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    if (!navToggle || !navLinks) return;
+
+    function setOpen(open) {
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navLinks.classList.toggle('active', open);
+    }
+
+    navToggle.addEventListener('click', function () {
+        setOpen(navToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { setOpen(false); });
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+            setOpen(false);
+            navToggle.focus();
+        }
+    });
+})();
+
+// ===== Active nav link via IntersectionObserver (no per-scroll layout reads) =====
+(function () {
+    var sections = document.querySelectorAll('section[id]');
+    var links = {};
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (a) {
+        links[a.getAttribute('href').slice(1)] = a;
+    });
+    if (!sections.length || !('IntersectionObserver' in window)) return;
+
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                var id = entry.target.getAttribute('id');
+                Object.keys(links).forEach(function (key) {
+                    links[key].classList.toggle('active', key === id);
+                });
+            }
+        });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(function (s) { io.observe(s); });
+})();
+
+// ===== Fade-in on scroll (IntersectionObserver) =====
+(function () {
+    var fadeElements = document.querySelectorAll('.fade-in');
+    if (!('IntersectionObserver' in window)) {
+        fadeElements.forEach(function (el) { el.classList.add('visible'); });
+        return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                var siblings = entry.target.parentElement.querySelectorAll('.fade-in');
+                var siblingIndex = Array.prototype.indexOf.call(siblings, entry.target);
+                setTimeout(function () { entry.target.classList.add('visible'); }, siblingIndex * 100);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    fadeElements.forEach(function (el) { observer.observe(el); });
 })();
 
 // ===== Stat reveal popovers (Countries / Crop Species) — tap to toggle =====
-(function() {
+(function () {
     var reveals = document.querySelectorAll('.stat-item-reveal');
-    reveals.forEach(function(item) {
-        item.addEventListener('click', function(e) {
+    reveals.forEach(function (item) {
+        item.setAttribute('aria-expanded', 'false');
+
+        function close() { item.classList.remove('active'); item.setAttribute('aria-expanded', 'false'); }
+        function open() { item.classList.add('active'); item.setAttribute('aria-expanded', 'true'); }
+
+        item.addEventListener('click', function (e) {
             e.stopPropagation();
             var wasActive = item.classList.contains('active');
-            reveals.forEach(function(r) { r.classList.remove('active'); });
-            if (!wasActive) item.classList.add('active');
+            reveals.forEach(function (r) { r.classList.remove('active'); r.setAttribute('aria-expanded', 'false'); });
+            if (!wasActive) open();
         });
-        item.addEventListener('keydown', function(e) {
+
+        item.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 item.click();
+            } else if (e.key === 'Escape') {
+                close();
             }
         });
     });
-    // Close popovers when clicking elsewhere
-    document.addEventListener('click', function() {
-        reveals.forEach(function(r) { r.classList.remove('active'); });
+
+    document.addEventListener('click', function () {
+        reveals.forEach(function (r) { r.classList.remove('active'); r.setAttribute('aria-expanded', 'false'); });
     });
+})();
+
+// ===== Auto-update copyright year =====
+(function () {
+    var el = document.getElementById('copyrightYear');
+    if (el) el.textContent = new Date().getFullYear();
 })();

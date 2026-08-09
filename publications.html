@@ -26,7 +26,26 @@
     <meta name="twitter:description" content="Complete publication record (37 papers) in legume symbiosis, phosphate signalling, and CRISPR engineering.">
     <meta name="twitter:image" content="https://jawaharsingh.com/images/headshot.png">
 
-    <link rel="icon" type="image/png" href="images/headshot.png">
+    <!-- Icons -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0d7377" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1013" media="(prefers-color-scheme: dark)">
+
+    <!-- Set theme before paint to avoid a flash of the wrong colour scheme -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
 
     <!-- Structured data: CollectionPage with author -->
     <script type="application/ld+json">
@@ -60,30 +79,39 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/publications.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260809">
+    <link rel="stylesheet" href="css/publications.css?v=20260809">
 
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c2b40b963024a48b41af28e77da9bd5"}'></script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Primary">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">JS</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#research">Research</a></li>
-                <li><a href="publications.html" class="active">Publications</a></li>
-                <li><a href="index.html#future-lab">Future Lab</a></li>
-                <li><a href="index.html#teaching">Teaching</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="index.html#research">Research</a></li>
+                    <li><a href="publications.html" class="active" aria-current="page">Publications</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#future-lab">Future Lab</a></li>
+                    <li><a href="index.html#teaching">Teaching</a></li>
+                    <li><a href="index.html#leadership">Community</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme" title="Toggle light / dark">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                </button>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -102,8 +130,24 @@
     </header>
 
     <!-- Year sections -->
-    <main class="pub-page section">
+    <main class="pub-page section" id="main">
         <div class="container">
+
+        <!-- Filter toolbar -->
+        <div class="pub-filter" role="search">
+            <label for="pubSearch" class="visually-hidden">Search publications</label>
+            <input type="search" id="pubSearch" class="pub-search" placeholder="Search by title, author, journal, or keyword&hellip;" autocomplete="off">
+            <div class="pub-facets" role="group" aria-label="Filter by publication type">
+                <button type="button" class="pub-facet is-active" data-type="all" aria-pressed="true">All</button>
+                <button type="button" class="pub-facet" data-type="research" aria-pressed="false">Research</button>
+                <button type="button" class="pub-facet" data-type="reviews" aria-pressed="false">Reviews</button>
+                <button type="button" class="pub-facet" data-type="commentaries" aria-pressed="false">Commentaries</button>
+                <button type="button" class="pub-facet" data-type="book" aria-pressed="false">Book Chapters</button>
+            </div>
+            <p class="pub-count" id="pubCount" aria-live="polite"></p>
+        </div>
+
+        <p class="pub-empty" id="pubEmpty" hidden>No publications match your search. <button type="button" class="pub-reset" id="pubReset">Clear filters</button></p>
 
         <!-- 2026 -->
         <section class="pub-year-section">
@@ -149,8 +193,8 @@
             <h3 class="pub-cat-title">Research Articles</h3>
             <article class="pub-entry pub-entry-figured">
                 <div class="pub-entry-thumb">
-                    <a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">
-                        <img src="images/phosphate_nodulation_fig.jpg" alt="" loading="lazy">
+                    <a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="images/phosphate_nodulation_fig.jpg" alt="" loading="lazy" width="1200" height="379">
                     </a>
                 </div>
                 <div class="pub-entry-body">
@@ -396,7 +440,7 @@
             <h3 class="pub-cat-title">Research Articles</h3>
             <article class="pub-entry pub-entry-figured">
                 <div class="pub-entry-thumb">
-                    <a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">
+                    <a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
                         <img src="images/ca_lysmrlk_phenotype.jpg" alt="" loading="lazy">
                     </a>
                 </div>
@@ -465,6 +509,95 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=20260809"></script>
+    <script>
+    // ===== Client-side publication filter (search + type facets) =====
+    (function () {
+        var search = document.getElementById('pubSearch');
+        var facets = [].slice.call(document.querySelectorAll('.pub-facet'));
+        var countEl = document.getElementById('pubCount');
+        var emptyEl = document.getElementById('pubEmpty');
+        var resetBtn = document.getElementById('pubReset');
+        var entries = [].slice.call(document.querySelectorAll('.pub-entry'));
+        if (!entries.length || !search) return;
+
+        // Classify each entry by its nearest preceding category heading
+        entries.forEach(function (entry) {
+            var type = 'other', el = entry.previousElementSibling;
+            while (el) {
+                if (el.classList && el.classList.contains('pub-cat-title')) {
+                    var t = el.textContent.toLowerCase();
+                    if (t.indexOf('research') > -1) type = 'research';
+                    else if (t.indexOf('review') > -1 || t.indexOf('perspective') > -1) type = 'reviews';
+                    else if (t.indexOf('commentar') > -1) type = 'commentaries';
+                    else if (t.indexOf('book') > -1) type = 'book';
+                    break;
+                }
+                el = el.previousElementSibling;
+            }
+            entry.dataset.type = type;
+            entry.dataset.text = entry.textContent.toLowerCase();
+        });
+
+        var activeType = 'all';
+
+        function apply() {
+            var q = (search.value || '').trim().toLowerCase();
+            var shown = 0;
+            entries.forEach(function (entry) {
+                var okType = activeType === 'all' || entry.dataset.type === activeType;
+                var okText = !q || entry.dataset.text.indexOf(q) > -1;
+                var show = okType && okText;
+                entry.hidden = !show;
+                if (show) shown++;
+            });
+            // Hide category headings with no visible entries
+            document.querySelectorAll('.pub-cat-title').forEach(function (h) {
+                var vis = false, el = h.nextElementSibling;
+                while (el && !(el.classList && (el.classList.contains('pub-cat-title') || el.classList.contains('pub-year-title')))) {
+                    if (el.classList && el.classList.contains('pub-entry') && !el.hidden) { vis = true; break; }
+                    el = el.nextElementSibling;
+                }
+                h.hidden = !vis;
+            });
+            // Hide year sections with no visible entries
+            document.querySelectorAll('.pub-year-section').forEach(function (sec) {
+                sec.hidden = !sec.querySelector('.pub-entry:not([hidden])');
+            });
+            countEl.textContent = shown + ' of ' + entries.length + ' publications';
+            emptyEl.hidden = shown > 0;
+        }
+
+        search.addEventListener('input', apply);
+
+        facets.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                activeType = btn.dataset.type;
+                facets.forEach(function (b) {
+                    var on = b === btn;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+                });
+                apply();
+            });
+        });
+
+        if (resetBtn) {
+            resetBtn.addEventListener('click', function () {
+                search.value = '';
+                activeType = 'all';
+                facets.forEach(function (b) {
+                    var on = b.dataset.type === 'all';
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+                });
+                apply();
+                search.focus();
+            });
+        }
+
+        apply();
+    })();
+    </script>
 </body>
 </html>
