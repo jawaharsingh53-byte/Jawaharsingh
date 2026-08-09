@@ -2599,29 +2599,6 @@ a.card-tag-link:hover {
 /* Fix AA contrast: impact line off #2a9d8f (3.32:1) onto the darker teal */
 .pub-impact { color: var(--primary); }
 
-.pub-flag {
-    display: inline-block;
-    font-size: 0.68rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
-    color: var(--white);
-    background: var(--primary);
-    padding: 3px 10px;
-    border-radius: 4px;
-    margin-bottom: 8px;
-}
-
-.pub-item-flagship {
-    background: var(--accent-light);
-    border-left: 3px solid var(--primary);
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    padding: 20px 24px;
-}
-
-.pub-item-flagship:hover { padding-left: 24px; }
-.pub-item-flagship .pub-year { color: var(--primary); }
-
 /* ---- Contact headings promoted h4 -> h3 ---- */
 .contact-item h3 {
     font-size: 0.85rem;
