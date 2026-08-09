@@ -2565,17 +2565,16 @@ a.card-tag-link:hover {
     :root:not([data-theme='light']):not([data-theme='dark']) .theme-toggle .icon-moon { display: block; }
 }
 
-/* ---- Hero bio lede: refined supporting paragraph — smaller, airier, on a
-   tidy measure with even line lengths. No justify gaps, no hyphen-broken words. ---- */
+/* ---- Hero bio lede: flush RIGHT edge (justified) with NO broken words.
+   Full width keeps the word spacing tight; hyphens disabled so no "bio-logy". ---- */
 .hero-lede {
-    max-width: 54ch;
-    font-size: 1rem;
+    max-width: none;
+    font-size: 1.02rem;
     font-weight: 400;
-    line-height: 1.85;
-    letter-spacing: 0.01em;
+    line-height: 1.8;
     color: var(--text);
-    text-align: left;
-    text-wrap: balance;
+    text-align: justify;
+    text-justify: inter-word;
     hyphens: manual;
     -webkit-hyphens: manual;
 }
