@@ -2565,15 +2565,15 @@ a.card-tag-link:hover {
     :root:not([data-theme='light']):not([data-theme='dark']) .theme-toggle .icon-moon { display: block; }
 }
 
-/* ---- Hero bio lede: justified so BOTH edges are flush/uniform (not just the left),
-   with hyphenation to keep word spacing even and avoid gaps/rivers ---- */
+/* ---- Hero bio lede: clean left-aligned column with even line lengths.
+   No justify gaps, no hyphen-broken words; a tidy readable measure. ---- */
 .hero-lede {
-    max-width: none;
+    max-width: 58ch;
     line-height: 1.7;
-    text-align: justify;
-    text-justify: inter-word;
-    hyphens: auto;
-    -webkit-hyphens: auto;
+    text-align: left;
+    text-wrap: balance;
+    hyphens: manual;
+    -webkit-hyphens: manual;
 }
 
 /* ---- Publications: title-as-heading + flagship highlight ---- */
