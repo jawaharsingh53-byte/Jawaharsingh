@@ -2565,12 +2565,15 @@ a.card-tag-link:hover {
     :root:not([data-theme='light']):not([data-theme='dark']) .theme-toggle .icon-moon { display: block; }
 }
 
-/* ---- Hero bio lede: fill the same column width as the name/manifesto above it
-   so the block is uniform (was stepping inward at ~654px vs the 748px lines above) ---- */
+/* ---- Hero bio lede: justified so BOTH edges are flush/uniform (not just the left),
+   with hyphenation to keep word spacing even and avoid gaps/rivers ---- */
 .hero-lede {
     max-width: none;
-    line-height: 1.6;
-    text-wrap: pretty;          /* keeps full width; only prevents an orphan last word */
+    line-height: 1.7;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 /* ---- Publications: title-as-heading + flagship highlight ---- */
