@@ -3008,3 +3008,14 @@ a.card-tag-link:hover {
     .process-grid { grid-template-columns: 1fr; }
 }
 
+/* Section title tuned to stay on one line on desktop (wraps below ~780px) */
+.section-title-fit {
+    font-size: clamp(1.7rem, 3.2vw, 2.8rem);
+}
+
+@media (min-width: 780px) {
+    .section-title-fit {
+        white-space: nowrap;
+    }
+}
+
