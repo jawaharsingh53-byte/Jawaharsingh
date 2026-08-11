@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawahar Singh, Ph.D. | Legume Symbiosis, Nitrogen Fixation &amp; Genome Engineering</title>
+    <meta name="description" content="Dr Jawahar Singh, plant molecular biologist at the Sainsbury Laboratory, Cambridge — the cellular regulation and engineering of nitrogen-fixing root nodule symbiosis in crop legumes.">
+    <meta name="author" content="Jawahar Singh">
+    <meta name="robots" content="noindex,nofollow">
+
+    <!-- Icons -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0d7377" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1013" media="(prefers-color-scheme: dark)">
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260810">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" aria-label="Primary">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">JS</a>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="#notes">Research Notes</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-primary nav-cta">Collaborate</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme" title="Toggle light / dark">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                </button>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+
+    <!-- 01. Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-name">Jawahar Singh<span class="hero-comma">,</span> <span class="hero-degree">Ph.D.</span></h1>
+                <p class="hero-manifesto">Engineering how plants make their own fertilizer.</p>
+                <p class="hero-lede">Legumes have evolved one of nature's most remarkable partnerships &mdash; working with soil bacteria to turn atmospheric nitrogen into a form plants can use. My research asks a bigger question: can we understand this system well enough to <strong>engineer</strong> it?</p>
+                <p class="hero-lede">I study how nutrient signals, developmental programmes and plant&ndash;microbe interactions control nitrogen-fixing root nodules &mdash; combining functional genomics, cell biology and genome engineering to find the molecular constraints on symbiosis, and how they might be rewired in crop legumes.</p>
+                <div class="hero-cta">
+                    <a href="#research" class="btn btn-primary">Explore my research</a>
+                    <a href="publications.html" class="btn btn-outline">Read my latest work</a>
+                </div>
+                <p class="hero-affiliation">Postdoctoral Research Associate</p>
+                <p class="hero-institution">Sainsbury Laboratory, University of Cambridge</p>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <picture>
+                        <source srcset="images/headshot.webp" type="image/webp">
+                        <img src="images/headshot.png" alt="Dr. Jawahar Singh" width="600" height="600" fetchpriority="high">
+                    </picture>
+                </div>
+                <div class="hero-image-accent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. The challenge -->
+    <section class="section section-alt" id="challenge">
+        <div class="container">
+            <div class="section-head-narrow">
+                <p class="eyebrow">The challenge</p>
+                <h2 class="statement">Agriculture needs nitrogen. Plants already know how to make it available.</h2>
+            </div>
+            <div class="prose">
+                <p>Modern agriculture depends heavily on synthetic nitrogen fertilizer &mdash; energy-intensive to produce and a major source of emissions and pollution. Legumes offer a fundamentally different solution. Through root nodules, they establish a partnership with rhizobia that enables biological nitrogen fixation.</p>
+                <p>But this system is not simply switched on. The plant continuously integrates information about its nutritional status, developmental state and environment before deciding whether to build and maintain a nodule. <strong>My research focuses on understanding that decision</strong> &mdash; because if we can identify the molecular constraints controlling nitrogen fixation, we may be able to engineer legumes that acquire more nitrogen while needing less fertilizer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. The question -->
+    <section class="section" id="question">
+        <div class="container">
+            <div class="section-head-narrow">
+                <p class="eyebrow">The question</p>
+                <h2 class="statement">When does a plant decide to invest in nitrogen fixation?</h2>
+            </div>
+            <div class="prose">
+                <p>A root nodule is more than a structure that houses bacteria. It is a tightly regulated organ whose development forces the plant to coordinate many processes at once:</p>
+            </div>
+            <ul class="process-grid">
+                <li>Nutrient availability</li>
+                <li>Hormonal signalling</li>
+                <li>Immune regulation</li>
+                <li>Cell differentiation</li>
+                <li>Microbial recognition</li>
+                <li>Nutrient transport</li>
+            </ul>
+            <div class="prose">
+                <p class="prose-emphasis">My work sits at the intersection of these processes &mdash; and centres on one question: how does a plant balance the cost of building and maintaining a nitrogen-fixing nodule against the nutritional benefit it provides? Understanding that balance could reveal new ways to improve symbiotic performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. Research discoveries -->
+    <section class="section section-alt" id="research">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyebrow">Research discoveries</p>
+                <h2 class="section-title">Three discoveries shaping my programme</h2>
+            </div>
+
+            <article class="discovery fade-in">
+                <div class="discovery-num">01</div>
+                <div class="discovery-body">
+                    <h3>Phosphate can gate whether nodulation happens</h3>
+                    <p>Plants do not treat nitrogen fixation independently of their own nutritional status. In common bean, I found that the phosphate starvation&ndash;response transcription factor <span class="mono">PvPHR-L7</span> binds the <span class="mono">P1BS</span> <em>cis</em>-element in the promoters of the nodulation master-regulator <span class="mono">NIN</span> and the autoregulation gene <span class="mono">TML</span>. Knocking it down increases nodulation; over-expressing it decreases nodulation &mdash; placing phosphate signalling directly upstream of the decision to nodulate.</p>
+                    <p class="discovery-idea"><strong>The broader idea:</strong> phosphate availability can act as a gatekeeper for symbiotic investment &mdash; a previously underappreciated link between plant nutrient homeostasis and nitrogen-fixing symbiosis.</p>
+                    <figure class="abstract-figure">
+                        <picture>
+                            <source srcset="images/phosphate_nodulation_abstract.webp" type="image/webp">
+                            <img src="images/phosphate_nodulation_abstract.jpg" alt="Under adequate phosphate, SPX sequesters PHR-L7 and NIN is expressed, enabling symbiosis; under low phosphate PHR-L7 is active, represses NIN, and nodulation is blocked." loading="lazy" width="1201" height="695">
+                        </picture>
+                        <figcaption class="abstract-caption-split">
+                            <span class="abstract-caption-half abstract-caption-left">Under adequate phosphate, SPX sequesters PHR-L7 (inactive) and <em>NIN</em> is expressed, enabling symbiosis.</span>
+                            <span class="abstract-caption-half abstract-caption-right">Under low Pi, PHR-L7 becomes active, represses <em>NIN</em>, and nodulation is blocked.</span>
+                        </figcaption>
+                    </figure>
+                    <div class="discovery-actions">
+                        <a href="https://doi.org/10.1093/pcp/pcaf069" class="btn btn-outline" target="_blank" rel="noopener">Read the paper &rarr;</a>
+                        <span class="card-tag">Singh <em>et al.</em>, Plant Cell Physiol. 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="discovery fade-in">
+                <div class="discovery-num">02</div>
+                <div class="discovery-body">
+                    <h3>Nodulation begins with molecular recognition</h3>
+                    <p>During my PhD I investigated how chickpea perceives rhizobial Nod factors. I identified and characterised a family of <strong>17 LysM receptor-like kinases</strong> and studied their roles in the signalling that connects microbial recognition at the root surface to downstream developmental responses &mdash; showing that knockdown of <span class="mono">CaNFP</span> and <span class="mono">CaLYK3</span> reduces nodulation. This work helped define the receptor toolkit for Nod-factor perception in a non-model crop legume.</p>
+                    <div class="discovery-actions">
+                        <a href="https://doi.org/10.1016/j.envexpbot.2022.104999" class="btn btn-outline" target="_blank" rel="noopener">Read the paper &rarr;</a>
+                        <span class="card-tag">Singh &amp; Verma, Environ. Exp. Bot. 2022</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="discovery fade-in">
+                <div class="discovery-num">03</div>
+                <div class="discovery-body">
+                    <h3>The next step is engineering the system</h3>
+                    <p>At the Sainsbury Laboratory I am taking these questions from discovery toward engineering. My current work studies conserved regulatory mechanisms that constrain nitrogen fixation in crop legumes &mdash; cowpea and soybean &mdash; asking which genes limit nodule performance, whether those constraints can be removed, and whether regulatory pathways can be <em>tuned</em> rather than simply switched on or off.</p>
+                    <div class="discovery-actions">
+                        <a href="#current" class="btn btn-outline">See current research &darr;</a>
+                        <a href="https://www.ensa.ac.uk/team/jawahar-singh/" class="card-tag card-tag-link" target="_blank" rel="noopener">ENSA &rarr;</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 05. Current research -->
+    <section class="section" id="current">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyebrow">Current research</p>
+                <h2 class="section-title">From understanding nodulation to engineering it</h2>
+                <p class="section-subtitle">The transition I see as central to the future of symbiosis research: from describing regulatory networks to experimentally rewiring them.</p>
+            </div>
+            <div class="current-grid">
+                <div class="current-item fade-in">
+                    <h3>Cowpea</h3>
+                    <p>A major food and forage legume of importance for smallholder agriculture, particularly across Africa.</p>
+                </div>
+                <div class="current-item fade-in">
+                    <h3>Soybean</h3>
+                    <p>One of the world's most important protein and oil crops, with large potential for improving biological nitrogen fixation.</p>
+                </div>
+                <div class="current-item fade-in">
+                    <h3>Functional genomics</h3>
+                    <p>Identifying the genes and regulatory elements that control nodule formation, maintenance and nitrogen fixation.</p>
+                </div>
+                <div class="current-item fade-in">
+                    <h3>Genome engineering</h3>
+                    <p>Using CRISPR-Cas to test whether manipulating these regulatory mechanisms can improve symbiotic performance.</p>
+                </div>
+            </div>
+            <p class="prose-emphasis current-close">The goal is not simply to make plants with more nodules &mdash; it is to understand what makes a nodule <strong>productive, persistent and nutritionally valuable</strong>.</p>
+        </div>
+    </section>
+
+    <!-- 06. Future programme -->
+    <section class="section section-alt" id="future-lab">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyebrow">The research programme I want to build</p>
+                <h2 class="section-title">Engineering nutrient-smart symbiosis</h2>
+            </div>
+            <div class="vision-intro">
+                <p>My long-term goal is an independent programme at the interface of <strong>plant nutrient signalling, cell biology, symbiosis and genome engineering</strong>. The central idea is simple: a nodule is an engineered biological organ whose performance is controlled by the plant's nutritional and developmental state. I want to understand that control system &mdash; and determine whether it can be redesigned.</p>
+            </div>
+            <div class="program-grid">
+                <div class="program-card fade-in">
+                    <div class="program-number">01</div>
+                    <h3>Discover &mdash; what limits nodule performance?</h3>
+                    <p>Identify the genetic and cellular mechanisms that control nodule formation, differentiation, longevity and nitrogen fixation.</p>
+                    <div class="program-tags">
+                        <span>Nutrient signalling</span>
+                        <span>Cell-type regulation</span>
+                        <span>Nodule longevity</span>
+                    </div>
+                </div>
+                <div class="program-card fade-in">
+                    <div class="program-number">02</div>
+                    <h3>Decode &mdash; how do nutrient signals converge on symbiosis?</h3>
+                    <p>Plants sense nitrogen, phosphorus, potassium, iron and more at once. I want to understand how those signals are integrated at the cellular level to decide whether nodules are initiated, maintained or restricted.</p>
+                    <div class="program-tags">
+                        <span>Transcriptomics</span>
+                        <span>Single-cell &amp; spatial</span>
+                        <span>Genetic perturbation</span>
+                    </div>
+                </div>
+                <div class="program-card fade-in">
+                    <div class="program-number">03</div>
+                    <h3>Engineer &mdash; can we rewire the regulatory system?</h3>
+                    <p>Once the limiting mechanisms are known, the question is whether they can be modified &mdash; not to make biology behave unnaturally, but to understand its control points well enough to make useful changes.</p>
+                    <div class="program-tags">
+                        <span>CRISPR-Cas editing</span>
+                        <span>Promoter engineering</span>
+                        <span>Synthetic elements</span>
+                    </div>
+                </div>
+                <div class="program-card fade-in">
+                    <div class="program-number">04</div>
+                    <h3>Translate &mdash; can better symbiosis cut fertilizer dependence?</h3>
+                    <p>Engineered traits must work beyond controlled conditions. The programme connects molecular discovery to crop performance under nutrient limitation and stress &mdash; from molecular mechanism to agricultural trait.</p>
+                    <div class="program-tags">
+                        <span>Nutrient limitation</span>
+                        <span>Field relevance</span>
+                        <span>Food security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. Research notes -->
+    <section class="section" id="notes">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyebrow">Research notes</p>
+                <h2 class="section-title">Thinking beyond the paper</h2>
+                <p class="section-subtitle">Short pieces on questions emerging from my research, new ideas in plant biology, and the challenge of understanding and engineering symbiosis. First notes coming soon.</p>
+            </div>
+            <div class="notes-grid">
+                <article class="note-card">
+                    <span class="note-status">Coming soon</span>
+                    <h3>Why does phosphate control whether a plant forms a nodule?</h3>
+                    <p>A plant does not make a nodule for free. What happens when its phosphate supply is limited?</p>
+                </article>
+                <article class="note-card">
+                    <span class="note-status">Coming soon</span>
+                    <h3>Can we engineer legumes to fix more nitrogen?</h3>
+                    <p>Why the attractive engineering problem is harder than it sounds.</p>
+                </article>
+                <article class="note-card">
+                    <span class="note-status">Coming soon</span>
+                    <h3>A nodule is not just a home for bacteria</h3>
+                    <p>Reframing the nodule as a regulated, engineered organ.</p>
+                </article>
+                <article class="note-card">
+                    <span class="note-status">Coming soon</span>
+                    <h3>Why more nodules does not mean more nitrogen</h3>
+                    <p>Nodule number is not the same as nitrogen fixed.</p>
+                </article>
+                <article class="note-card">
+                    <span class="note-status">Coming soon</span>
+                    <h3>What does a plant sacrifice to keep a nodule?</h3>
+                    <p>The metabolic cost of maintaining a nitrogen-fixing organ.</p>
+                </article>
+                <article class="note-card">
+                    <span class="note-status">Coming soon</span>
+                    <h3>From PHR1 to CRISPR: the evolution of my research question</h3>
+                    <p>How a phosphate-signalling discovery became a programme in engineering symbiosis.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08. Selected publications -->
+    <section class="section section-alt" id="publications">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyebrow">Selected publications</p>
+                <h2 class="section-title">Discoveries, not just papers</h2>
+                <p class="section-subtitle">Work spanning legume symbiosis, nutrient signalling, Nod-factor perception and plant stress biology.</p>
+            </div>
+            <div class="pub-list">
+                <div class="pub-item fade-in">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
+                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">Beyond Nitrogen: Phosphate Controls Root Nodule Symbiosis Commitment</a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong>, Vald&eacute;s-L&oacute;pez, O., &amp; Schornack, S. &middot; <em>Trends in Plant Science</em></p>
+                        <p class="pub-impact">Perspective on the emerging phosphate&ndash;nodulation regulatory paradigm.</p>
+                    </div>
+                </div>
+                <div class="pub-item fade-in">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h3 class="pub-title"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">Phosphate deficiency reduces nodule formation through a phosphate starvation response-like protein in <em>Phaseolus vulgaris</em></a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong>, Mendoza-Soto, A. B., Tiwari, M., et al. &middot; <em>Plant and Cell Physiology</em></p>
+                        <p class="pub-impact">First evidence connecting PHR-type phosphate signalling directly with the <em>NIN</em> regulatory network.</p>
+                    </div>
+                </div>
+                <div class="pub-item fade-in">
+                    <span class="pub-year">2022</span>
+                    <div class="pub-details">
+                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">Genome-wide identification, expression, and characterization of CaLysM-RLKs in chickpea root nodule symbiosis</a></h3>
+                        <p class="pub-authors"><strong>Singh, J.</strong> &amp; Verma, P. K. &middot; <em>Environmental and Experimental Botany</em></p>
+                        <p class="pub-impact">Characterisation of LysM receptor-like kinases in Nod-factor signalling.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-more">
+                <p>+ reviews, MPMI commentaries, and book chapters</p>
+                <div class="pub-more-actions">
+                    <a href="publications.html" class="btn btn-primary">View all publications &rarr;</a>
+                    <a href="https://scholar.google.com/citations?user=mANYUGQAAAAJ&amp;hl=en" class="btn btn-outline" target="_blank" rel="noopener">Google Scholar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 09. About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyebrow">About</p>
+                <h2 class="section-title">From studying stress biology to engineering symbiosis</h2>
+            </div>
+            <div class="about-prose">
+                <p>My scientific journey has taken me across three countries and through several levels of plant biology. I began with stress physiology and proteomics in India. During my PhD at the National Institute of Plant Genome Research (New Delhi), I moved into legume biology and the molecular mechanisms of Nod-factor perception in chickpea. In Mexico, I studied how phosphate availability influences nodulation in common bean &mdash; work that led to a direct connection between phosphate starvation signalling and the master regulator of nodulation. At Cambridge, I am now translating these regulatory principles into genetic strategies for improving nitrogen fixation in crop legumes.</p>
+                <p>Each stage has changed the question I ask: from how plants respond to stress, to how they establish symbiosis, to how we might engineer that symbiosis for agriculture.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker active"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023&ndash;Present</span>
+                        <h3>Sainsbury Laboratory, University of Cambridge, UK</h3>
+                        <p>Postdoctoral Research Associate with <strong>Prof. Sebastian Schornack</strong> (ENSA) &mdash; genome-engineering cowpea and soybean for enhanced nitrogen fixation; functional-genomics dissection of nodule development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022&ndash;2023</span>
+                        <h3>UNAM, Mexico City, Mexico</h3>
+                        <p>DGAPA Postdoctoral Fellow with <strong>Prof. Oswaldo Vald&eacute;s-L&oacute;pez</strong> &mdash; connected phosphate starvation signalling (PHR-L7) to the <em>NIN</em> regulatory network in common bean.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2016&ndash;2022</span>
+                        <h3>NIPGR, New Delhi, India</h3>
+                        <p>Ph.D. in Plant Biology with <strong>Prof. Praveen K. Verma</strong> &mdash; characterised 17 LysM receptor-like kinases for Nod-factor perception in chickpea.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2012&ndash;2016</span>
+                        <h3>Earlier training, India</h3>
+                        <p>M.Sc. in Biochemistry (West Bengal State University) and stress proteomics in pearl millet (JNVU, Jodhpur) &mdash; foundations in how nutrients and signals shape plant physiology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-row">
+                <span><strong>35+</strong> publications</span>
+                <span><strong>4</strong> legume systems</span>
+                <span><strong>3</strong> countries</span>
+                <span><strong>10+</strong> researchers mentored</span>
+            </div>
+
+            <div class="beyond">
+                <h3 class="beyond-title">Beyond research &mdash; building people and community</h3>
+                <div class="beyond-grid">
+                    <div class="beyond-item">
+                        <h4>Teaching &amp; mentoring</h4>
+                        <p>Undergraduate supervisor in Plant &amp; Microbial Sciences at Cambridge; mentor to Master's students and interns in molecular biology, imaging, genome engineering and data analysis.</p>
+                    </div>
+                    <div class="beyond-item">
+                        <h4>Editorial &amp; community</h4>
+                        <p>Assistant Feature Editor at <em>Molecular Plant-Microbe Interactions</em>; co-organiser of the IS-MPMI Congress 2025 mentoring satellite (Cologne).</p>
+                    </div>
+                    <div class="beyond-item">
+                        <h4>Peer review</h4>
+                        <p>Reviewer for <em>The Plant Cell</em>, <em>New Phytologist</em>, <em>The Plant Journal</em>, <em>J. Experimental Botany</em>, <em>Frontiers in Plant Science</em>, and others.</p>
+                    </div>
+                    <div class="beyond-item">
+                        <h4>Awards &amp; fellowships</h4>
+                        <p>DGAPA Postdoctoral Fellowship (UNAM); CSIR-UGC Senior &amp; Junior Research Fellowships (India); Swachhta Saarthi Fellowship (Govt. of India).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Collaborate / Contact -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyebrow">Collaborate</p>
+                <h2 class="section-title">Let's build the next question together</h2>
+                <p class="section-subtitle">Collaboration starts with a good scientific question. I'm interested in work at the intersection of:</p>
+            </div>
+            <ul class="interest-chips">
+                <li>Legume biology</li>
+                <li>Nutrient signalling</li>
+                <li>Root nodule symbiosis</li>
+                <li>Cell biology</li>
+                <li>Functional genomics</li>
+                <li>Genome engineering</li>
+                <li>Sustainable agriculture</li>
+            </ul>
+            <div class="collab-actions">
+                <a href="mailto:Jawahar.Singh@slcu.cam.ac.uk" class="btn btn-primary">Start a conversation</a>
+                <span class="collab-note">Open to collaborations, seminar invitations, and PI / Group Leader opportunities worldwide.</span>
+            </div>
+            <div class="collab-contact">
+                <a href="https://www.slcu.cam.ac.uk/people/jawahar-singh" target="_blank" rel="noopener">Cambridge profile</a>
+                <a href="https://scholar.google.com/citations?user=mANYUGQAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://orcid.org/0000-0003-4893-741X" target="_blank" rel="noopener">ORCID</a>
+                <a href="https://www.linkedin.com/in/jawahar-singh-phd-57892068/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:Jawahar.Singh@slcu.cam.ac.uk">Jawahar.Singh@slcu.cam.ac.uk</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">Jawahar Singh, Ph.D.</p>
+            <p>Plant molecular biologist &middot; Sainsbury Laboratory, University of Cambridge</p>
+            <p class="footer-note">Legume symbiosis &middot; Nutrient signalling &middot; Nitrogen fixation &middot; Genome engineering</p>
+            <p class="footer-copy">&copy; <span id="copyrightYear">2026</span> Jawahar Singh &middot; Cambridge, United Kingdom</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=20260810"></script>
+</body>
+</html>
