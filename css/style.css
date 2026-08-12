@@ -3019,3 +3019,15 @@ a.card-tag-link:hover {
     }
 }
 
+/* Subtitle forced onto a single line on desktop (wraps below ~760px) */
+.subtitle-1line {
+    max-width: none;
+}
+
+@media (min-width: 760px) {
+    .subtitle-1line {
+        white-space: nowrap;
+        font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+    }
+}
+
