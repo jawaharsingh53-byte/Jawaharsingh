@@ -3060,12 +3060,12 @@ a.card-tag-link:hover {
 
 .signature-statement {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-size: clamp(1.8rem, 4.2vw, 3rem);
     font-weight: 700;
-    line-height: 1.12;
+    line-height: 1.15;
     letter-spacing: -0.5px;
     color: var(--dark);
-    max-width: 18ch;
+    max-width: 22ch;
     margin: 0 auto 20px;
 }
 
@@ -3185,17 +3185,25 @@ a.card-tag-link:hover {
     color: var(--text-light) !important;
 }
 
-/* Pull quote */
+/* Pull quote — a large visual break */
 .pullquote {
-    max-width: 760px;
-    margin: 0 auto 44px;
-    padding-left: 22px;
-    border-left: 3px solid var(--primary);
+    max-width: 860px;
+    margin: 0 auto 48px;
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: clamp(1.4rem, 2.6vw, 2.1rem);
-    line-height: 1.4;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    line-height: 1.35;
     color: var(--dark);
+}
+
+.st-species {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
 }
 
 /* Systems / question / tools */
