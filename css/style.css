@@ -3031,3 +3031,274 @@ a.card-tag-link:hover {
     }
 }
 
+/* =========================================================================
+   NARRATIVE HOMEPAGE v2 — refined sections (hero subtitle, signature idea,
+   research journey, expandable mechanism, pull quote, systems/tools,
+   tight programme pillars, publication labels, journey cards).
+   ========================================================================= */
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 52ch;
+    margin-bottom: 18px;
+}
+
+.eyebrow-center {
+    display: block;
+    text-align: center;
+}
+
+/* Signature idea — the visual centrepiece */
+.signature {
+    background: var(--accent-light);
+    text-align: center;
+}
+
+.signature-statement {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.5px;
+    color: var(--dark);
+    max-width: 18ch;
+    margin: 0 auto 20px;
+}
+
+.signature-sub {
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 42ch;
+    margin: 0 auto 48px;
+}
+
+.signature-sub em { color: var(--primary); font-style: italic; }
+
+.perf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 820px;
+    margin: 0 auto 48px;
+}
+
+.perf-item {
+    padding: 26px 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--primary);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    text-align: left;
+}
+
+.perf-label {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.perf-item p {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--text-light);
+}
+
+.signature-tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    line-height: 1.5;
+    color: var(--dark);
+    max-width: 48ch;
+    margin: 0 auto;
+}
+
+.signature-tagline em { color: var(--primary); font-style: italic; }
+
+/* Research journey — stage + system labels inside the discovery blocks */
+.discovery-body .journey-stage {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin: 0 0 4px;
+}
+
+.discovery-body .journey-system {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin: 0 0 14px;
+}
+
+/* Expandable mechanism (native details/summary) */
+.mechanism {
+    margin: 4px 0 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--off-white);
+}
+
+.mechanism summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    list-style: none;
+}
+
+.mechanism summary::-webkit-details-marker { display: none; }
+
+.mechanism summary::after {
+    content: ' \25be';
+    font-size: 0.85rem;
+}
+
+.mechanism[open] summary::after { content: ' \25b4'; }
+
+.mechanism-body {
+    padding: 0 16px 16px;
+}
+
+.mechanism-body p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.mono-line {
+    font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+    font-size: 0.9rem !important;
+    color: var(--text-light) !important;
+}
+
+/* Pull quote */
+.pullquote {
+    max-width: 760px;
+    margin: 0 auto 44px;
+    padding-left: 22px;
+    border-left: 3px solid var(--primary);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.4rem, 2.6vw, 2.1rem);
+    line-height: 1.4;
+    color: var(--dark);
+}
+
+/* Systems / question / tools */
+.st-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.st-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.st-item p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+/* Tight programme pillars */
+.program-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.program-card-tight h3 {
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+    padding-right: 40px;
+}
+
+/* Publication labels */
+.pub-label {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+/* About — three journey cards */
+.journey-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.journey-card {
+    padding: 28px 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.journey-flag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: var(--accent-light);
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.journey-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.journey-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-light);
+}
+
+@media (max-width: 820px) {
+    .perf-grid,
+    .st-grid,
+    .journey-cards { grid-template-columns: 1fr; }
+}
+
