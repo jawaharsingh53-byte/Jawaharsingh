@@ -3310,3 +3310,110 @@ a.card-tag-link:hover {
     .journey-cards { grid-template-columns: 1fr; }
 }
 
+/* =========================================================================
+   FLOW DIAGRAMS + PATHWAY (narrative homepage visual layer)
+   ========================================================================= */
+
+.flow,
+.perf-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    max-width: 900px;
+    margin: 0 auto 52px;
+}
+
+.perf-flow { align-items: stretch; }
+
+.flow-node {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+    padding: 22px 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--primary);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.flow-num {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    opacity: 0.4;
+    line-height: 1;
+}
+
+.flow-label {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.25;
+    margin: 6px 0 4px;
+}
+
+.flow-sub {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.flow-arrow,
+.perf-arrow {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.5rem;
+    padding: 0 6px;
+}
+
+.perf-flow .perf-item {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .flow,
+    .perf-flow { flex-direction: column; }
+    .flow-node,
+    .perf-flow .perf-item { width: 100%; }
+    .flow-arrow,
+    .perf-arrow { transform: rotate(90deg); padding: 4px 0; }
+}
+
+/* Mini signalling pathway inside the mechanism expander */
+.pathway {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.pathway-chip {
+    font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+    font-size: 0.85rem;
+    color: var(--dark);
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: var(--radius-sm);
+}
+
+.pathway-arrow { color: var(--primary); font-weight: 700; }
+
+.pathway-outcome {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+

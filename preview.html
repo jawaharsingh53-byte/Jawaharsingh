@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20260810e">
+    <link rel="stylesheet" href="css/style.css?v=20260810f">
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to content</a>
@@ -111,16 +111,18 @@
             <p class="eyebrow eyebrow-center">The idea shaping my programme</p>
             <h2 class="signature-statement">More nodules do not necessarily mean more nitrogen fixation.</h2>
             <p class="signature-sub">The real question: what makes a nodule <em>productive, persistent and nutritionally valuable</em>?</p>
-            <div class="perf-grid">
-                <div class="perf-item">
+            <div class="perf-flow" role="img" aria-label="Three dimensions of nodule performance: Formation, Function and Longevity.">
+                <div class="perf-item fade-in">
                     <span class="perf-label">Formation</span>
                     <p>Can the plant build the right nodule?</p>
                 </div>
-                <div class="perf-item">
+                <span class="perf-arrow fade-in" aria-hidden="true">&rarr;</span>
+                <div class="perf-item fade-in">
                     <span class="perf-label">Function</span>
                     <p>Can it fix nitrogen efficiently?</p>
                 </div>
-                <div class="perf-item">
+                <span class="perf-arrow fade-in" aria-hidden="true">&rarr;</span>
+                <div class="perf-item fade-in">
                     <span class="perf-label">Longevity</span>
                     <p>Can it stay productive?</p>
                 </div>
@@ -135,6 +137,26 @@
             <div class="section-head">
                 <p class="eyebrow">From mechanism to engineering</p>
                 <h2 class="section-title">My research has evolved through three questions</h2>
+            </div>
+
+            <div class="flow" role="img" aria-label="Research journey in three stages: Recognition in chickpea, then Nutrient regulation in common bean, then Engineering in cowpea and soybean.">
+                <div class="flow-node fade-in">
+                    <span class="flow-num">01</span>
+                    <span class="flow-label">Recognition</span>
+                    <span class="flow-sub">Chickpea</span>
+                </div>
+                <span class="flow-arrow fade-in" aria-hidden="true">&rarr;</span>
+                <div class="flow-node fade-in">
+                    <span class="flow-num">02</span>
+                    <span class="flow-label">Nutrient regulation</span>
+                    <span class="flow-sub">Common bean</span>
+                </div>
+                <span class="flow-arrow fade-in" aria-hidden="true">&rarr;</span>
+                <div class="flow-node fade-in">
+                    <span class="flow-num">03</span>
+                    <span class="flow-label">Engineering</span>
+                    <span class="flow-sub">Cowpea &amp; soybean</span>
+                </div>
             </div>
 
             <article class="discovery fade-in">
@@ -162,7 +184,15 @@
                         <summary>See the mechanism</summary>
                         <div class="mechanism-body">
                             <p>The phosphate starvation&ndash;response transcription factor <span class="mono">PvPHR-L7</span> binds the <span class="mono">P1BS</span> <em>cis</em>-element in the promoters of <span class="mono">NIN</span> and <span class="mono">TML</span>. Knocking it down increases nodulation; over-expressing it decreases nodulation.</p>
-                            <p class="mono-line"><span class="mono">PvPHR-L7</span> &rarr; <span class="mono">P1BS</span> &rarr; <span class="mono">NIN</span> / <span class="mono">TML</span> &rarr; nodulation</p>
+                            <div class="pathway" aria-hidden="true">
+                                <span class="pathway-chip">PvPHR-L7</span>
+                                <span class="pathway-arrow">&rarr;</span>
+                                <span class="pathway-chip">P1BS</span>
+                                <span class="pathway-arrow">&rarr;</span>
+                                <span class="pathway-chip">NIN / TML</span>
+                                <span class="pathway-arrow">&rarr;</span>
+                                <span class="pathway-outcome">nodulation</span>
+                            </div>
                         </div>
                     </details>
                     <figure class="abstract-figure">
