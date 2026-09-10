@@ -3423,3 +3423,18 @@ a.card-tag-link:hover {
 
 .program-grid-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .program-grid-3 { grid-template-columns: 1fr; } }
+
+/* ===== Crop band (replaces hero stats) ===== */
+.crop-band { background: var(--bg-alt, #f4f8f7); padding: 40px 0 28px; border-top: 1px solid rgba(0,0,0,0.05); }
+.crop-band-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--text); margin: 0 0 22px; }
+.crop-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.crop-card { margin: 0; background: var(--card-bg, #fff); border-radius: 14px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.06); }
+.crop-card img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.crop-card figcaption { padding: 12px 14px 14px; font-size: 0.92rem; line-height: 1.35; color: var(--text); }
+.crop-card figcaption strong { display: block; font-size: 1rem; }
+.crop-card figcaption em { display: block; color: var(--text-muted, #667); font-size: 0.85rem; }
+.crop-card figcaption span { display: block; margin-top: 6px; color: var(--primary); font-size: 0.82rem; font-weight: 500; }
+.crop-credit { margin: 16px 0 0; text-align: center; font-size: 0.72rem; color: var(--text-muted, #778); }
+.crop-credit a { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.2); }
+@media (max-width: 900px) { .crop-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .crop-grid { grid-template-columns: 1fr; } }
