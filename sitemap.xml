@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://jawaharsingh.com/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -29,12 +29,18 @@
   </url>
   <url>
     <loc>https://jawaharsingh.com/publications.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://jawaharsingh.com/images/ca_lysmrlk_phenotype.jpg</image:loc>
       <image:title>CaNFP-RNAi and CaLYK3-RNAi reduce chickpea nodulation (Singh &amp; Verma 2022, EBE)</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://jawaharsingh.com/Jawahar_Singh_CV.pdf</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
