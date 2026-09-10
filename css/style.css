@@ -330,10 +330,7 @@ a:hover {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     text-align: center;
 }
@@ -3424,17 +3421,13 @@ a.card-tag-link:hover {
 .program-grid-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .program-grid-3 { grid-template-columns: 1fr; } }
 
-/* ===== Crop band (replaces hero stats) ===== */
-.crop-band { background: var(--off-white); padding: 40px 0 28px; border-top: 1px solid var(--border); }
-.crop-band-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--dark); margin: 0 0 22px; }
-.crop-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.crop-card { margin: 0; background: var(--white); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
-.crop-card img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
-.crop-card figcaption { padding: 12px 14px 14px; font-size: 0.92rem; line-height: 1.35; color: var(--text); }
-.crop-card figcaption strong { display: block; font-size: 1rem; }
-.crop-card figcaption em { display: block; color: var(--text-light); font-size: 0.85rem; }
-.crop-card figcaption span { display: block; margin-top: 6px; color: var(--primary); font-size: 0.82rem; font-weight: 500; }
-.crop-credit { margin: 16px 0 0; text-align: center; font-size: 0.72rem; color: var(--text-light); }
-.crop-credit a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); }
-@media (max-width: 900px) { .crop-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .crop-grid { grid-template-columns: 1fr; } }
+
+/* ===== Crop thumbnails in the hero strip ===== */
+.stats-grid-crops { max-width: 880px; margin-left: auto; margin-right: auto; gap: 24px; }
+.stat-crop picture, .stat-crop img { display: block; }
+.stat-crop img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin: 0 auto 12px; border: 3px solid rgba(255,255,255,0.18); box-shadow: 0 4px 14px rgba(0,0,0,0.35); }
+.stat-crop .stat-label { display: block; color: #fff; letter-spacing: 0.5px; text-transform: none; font-size: 0.95rem; font-weight: 600; }
+.stat-latin { display: block; font-style: italic; font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+.stat-credit { margin: 22px 0 0; text-align: center; font-size: 0.66rem; color: rgba(255,255,255,0.4); padding: 0 20px; }
+.stat-credit a { color: inherit; text-decoration: underline; }
+@media (max-width: 640px) { .stats-grid-crops { grid-template-columns: repeat(2, 1fr); gap: 20px; } .stat-crop img { width: 80px; height: 80px; } }
