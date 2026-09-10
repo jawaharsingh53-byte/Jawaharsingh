@@ -330,7 +330,10 @@ a:hover {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
     gap: 32px;
     text-align: center;
 }
@@ -3417,3 +3420,6 @@ a.card-tag-link:hover {
     color: var(--primary);
 }
 
+
+.program-grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .program-grid-3 { grid-template-columns: 1fr; } }
