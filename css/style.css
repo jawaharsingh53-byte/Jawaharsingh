@@ -3431,3 +3431,6 @@ a.card-tag-link:hover {
 .stat-credit { margin: 22px 0 0; text-align: center; font-size: 0.66rem; color: rgba(255,255,255,0.4); padding: 0 20px; }
 .stat-credit a { color: inherit; text-decoration: underline; }
 @media (max-width: 640px) { .stats-grid-crops { grid-template-columns: repeat(2, 1fr); gap: 20px; } .stat-crop img { width: 80px; height: 80px; } }
+
+.footer-credit { font-size: 0.68rem; opacity: 0.55; margin-top: 6px; }
+.footer-credit a { color: inherit; text-decoration: underline; }
