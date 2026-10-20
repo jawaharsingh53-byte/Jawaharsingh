@@ -190,7 +190,7 @@
 
 @media (max-width: 720px) {
     .pub-entry-figured {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
     .pub-year-title {
         font-size: 2rem;
@@ -319,4 +319,11 @@
     .pub-filter {
         position: static;
     }
+}
+
+/* Long DOIs/URLs must be allowed to break, or they force the card wider
+   than a small phone screen */
+.pub-entry-doi,
+.pub-entry-doi a {
+    overflow-wrap: anywhere;
 }

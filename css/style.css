@@ -1560,9 +1560,20 @@ a.card-tag-link:hover {
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
     .hero-content {
-        grid-template-columns: 1fr;
+        /* minmax(0, 1fr) lets the column shrink below its widest child,
+           so nothing gets clipped by .hero { overflow: hidden } */
+        grid-template-columns: minmax(0, 1fr);
         text-align: center;
         gap: 40px;
+    }
+
+    .hero-name,
+    .hero-manifesto {
+        white-space: normal;
+    }
+
+    .hero-cta {
+        flex-wrap: wrap;
     }
 
     .hero-tagline {
@@ -3434,3 +3445,50 @@ a.card-tag-link:hover {
 
 .footer-credit { font-size: 0.68rem; opacity: 0.55; margin-top: 6px; }
 .footer-credit a { color: inherit; text-decoration: underline; }
+
+/* ---- Tablet / small laptop: collapse the 8-9 link nav into the hamburger.
+   The full row needs ~950px, so below 1080px it pushed the theme toggle
+   off-screen. Mirrors the <=640px mobile menu rules. ---- */
+@media (max-width: 1080px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all var(--transition);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-links {
+        top: 72px;
+    }
+}
+
+/* Justified text leaves big word gaps on narrow columns */
+@media (max-width: 640px) {
+    .hero-lede {
+        text-align: left;
+        hyphens: auto;
+    }
+}
