@@ -75,12 +75,15 @@
     document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (a) {
         links[a.getAttribute('href').slice(1)] = a;
     });
+    // Sections without their own nav item highlight their parent link
+    var parentOf = { leadership: 'teaching', hero: null };
     if (!sections.length || !('IntersectionObserver' in window)) return;
 
     var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 var id = entry.target.getAttribute('id');
+                if (id in parentOf) id = parentOf[id];
                 Object.keys(links).forEach(function (key) {
                     links[key].classList.toggle('active', key === id);
                 });
