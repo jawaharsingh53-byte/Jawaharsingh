@@ -1,0 +1,7 @@
+species	organism	assembly	source	url	filename	md5
+Mt	Medicago truncatula	MtrunA17r5.0-ANR	Ensembl Plants release-63	https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-63/fasta/medicago_truncatula/cdna/Medicago_truncatula.MtrunA17r5.0_ANR.cdna.all.fa.gz	Medicago_truncatula.MtrunA17r5.0_ANR.cdna.all.fa.gz	-
+Gm	Glycine max	Wm82.a2 (Glycine_max_v2.1)	Ensembl Plants release-63	https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-63/fasta/glycine_max/cdna/Glycine_max.Glycine_max_v2.1.cdna.all.fa.gz	Glycine_max.Glycine_max_v2.1.cdna.all.fa.gz	-
+Lj	Lotus japonicus	Gifu v1.3 (CDS)	Lotus Base (manual download)	MANUAL	Lotusjaponicus_Gifu_v1.3_cds.fa.gz	39fd2b5aa169e8eb18d55e4350fbc33c
+Sl	Solanum lycopersicum	SL4.0	Ensembl Plants release-63	https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-63/fasta/solanum_lycopersicum_gca000188115v5cm/cdna/Solanum_lycopersicum_gca000188115v5cm.SL4.0.cdna.all.fa.gz	Solanum_lycopersicum_gca000188115v5cm.SL4.0.cdna.all.fa.gz	-
+Zm	Zea mays	Zm-B73-REFERENCE-NAM-5.0	Ensembl Plants release-63	https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-63/fasta/zea_mays/cdna/Zea_mays.Zm-B73-REFERENCE-NAM-5.0.cdna.all.fa.gz	Zea_mays.Zm-B73-REFERENCE-NAM-5.0.cdna.all.fa.gz	-
+Os	Oryza sativa	IRGSP-1.0	Ensembl Plants release-63	https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-63/fasta/oryza_sativa/cdna/Oryza_sativa.IRGSP-1.0.cdna.all.fa.gz	Oryza_sativa.IRGSP-1.0.cdna.all.fa.gz	-

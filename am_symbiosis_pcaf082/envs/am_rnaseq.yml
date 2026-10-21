@@ -1,0 +1,16 @@
+name: am_rnaseq
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - wget
+  - pigz
+  - fastp>=0.23
+  - salmon=1.10.3
+  - multiqc
+  - r-base>=4.3
+  - r-tidyverse
+  - r-ggrepel
+  - bioconductor-deseq2
+  - bioconductor-tximport
+  - bioconductor-apeglm
