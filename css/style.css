@@ -7,7 +7,7 @@
     --dark: #1a1a2e;
     --dark-soft: #2d2d44;
     --text: #333340;
-    --text-light: #6b7280;
+    --text-light: #5b6470;
     --white: #ffffff;
     --off-white: #f8fafa;
     --border: #e5e7eb;
@@ -3779,5 +3779,78 @@ a.card-tag-link:hover {
     .section {
         padding-top: 64px;
         padding-bottom: 64px;
+    }
+}
+
+/* =====================================================================
+   Pre-flight fixes (25 Oct 2026): contrast, phone hero, label style
+   ===================================================================== */
+
+/* Takeaway banner: keep white text above 4.5:1 across the whole gradient */
+.key-takeaway {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+/* Skip link must stay legible in both themes */
+.skip-link,
+.skip-link:focus {
+    background: #095456;
+    color: #fff;
+}
+
+/* Small labels in sentence case, not tracked-out capitals */
+.crop-strip-label,
+.card-highlight,
+.research-row-head .card-highlight,
+.latest-label,
+.contact-item h3 {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.crop-strip-label {
+    font-size: var(--fs-meta);
+    font-weight: 500;
+}
+
+/* Publication title links: give single-line titles a 24px+ hit area */
+.pub-title a {
+    padding: 3px 0;
+}
+
+/* Phone: name, tagline and the three buttons fit on the first screen;
+   the bio follows below them */
+@media (max-width: 640px) {
+    .hero {
+        padding-top: 88px;
+    }
+    .hero-image-wrapper,
+    .hero-image-accent {
+        width: 132px;
+        height: 132px;
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-name { order: 1; }
+    .hero-manifesto { order: 2; }
+    .hero-cta { order: 3; margin: 4px 0 24px; }
+    .hero-lede { order: 4; }
+    .hero-affiliation { order: 5; }
+    .hero-institution { order: 6; }
+    .hero-badges { order: 7; }
+    .hero-cta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .hero-cta .btn {
+        flex: 1 1 140px;
+        width: auto;
+        padding: 12px 14px;
+        white-space: nowrap;
+        text-align: center;
     }
 }
