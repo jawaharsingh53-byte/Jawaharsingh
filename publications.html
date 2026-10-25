@@ -80,9 +80,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261025a">
-    <link rel="stylesheet" href="css/publications.css?v=20261024c">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"></noscript>
+    <link rel="stylesheet" href="css/style.css?v=20261025b">
+    <link rel="stylesheet" href="css/publications.css?v=20261025a">
 
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c2b40b963024a48b41af28e77da9bd5"}'></script>
@@ -143,6 +145,7 @@
                 <figure class="fp-figure">
                     <a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener" aria-label="Open the paper">
                         <picture>
+                            <source srcset="images/graphical_abstract-480.webp 480w, images/graphical_abstract-960.webp 960w" sizes="(max-width: 760px) 92vw, 704px" type="image/webp">
                             <img class="fp-crop" src="images/graphical_abstract.png" alt="Adequate phosphate: SPX holds PHR-L7 inactive, NIN is expressed and nodules form. Low phosphate: PHR-L7 is active, NIN is repressed and there is no symbiosis." loading="lazy" width="960" height="720">
                         </picture>
                     </a>
@@ -158,8 +161,8 @@
                 <figure class="fp-figure">
                     <a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener" aria-label="Open the paper">
                         <picture>
-                            <source srcset="images/mpmi_sole_fig1.webp" type="image/webp">
-                            <img src="images/mpmi_sole_fig1.jpg" alt="The SOLE element drives nodule-specific expression of DNF1 (SPC22) and SPC18; wild-type plants form pink functional nodules while SPC18 CRISPR knockout gives white non-functional nodules." loading="lazy" width="1600" height="1081">
+                            <source srcset="images/mpmi_sole_fig1-800.webp 800w, images/mpmi_sole_fig1.webp 1600w" sizes="(max-width: 760px) 92vw, 704px" type="image/webp">
+                            <img src="images/mpmi_sole_fig1-800.jpg" srcset="images/mpmi_sole_fig1-800.jpg 800w, images/mpmi_sole_fig1.jpg 1600w" sizes="(max-width: 760px) 92vw, 704px" alt="The SOLE element drives nodule-specific expression of DNF1 (SPC22) and SPC18; wild-type plants form pink functional nodules while SPC18 CRISPR knockout gives white non-functional nodules." loading="lazy" width="1600" height="1081">
                         </picture>
                     </a>
                     <figcaption>The SOLE element switches on <em>DNF1</em> (SPC22) and <em>SPC18</em> specifically in nodules. Wild-type plants form pink, nitrogen-fixing nodules; CRISPR knockout of <em>SPC18</em> gives white, non-functional ones.</figcaption>
@@ -180,8 +183,8 @@
                 <figure class="fp-figure">
                     <a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener" aria-label="Open the paper">
                         <picture>
-                            <source srcset="images/phosphate_nodulation_fig.webp" type="image/webp">
-                            <img src="images/phosphate_nodulation_fig.jpg" alt="PvPHR-L7 RNAi increases, and over-expression decreases, nodulation in Phaseolus vulgaris." loading="lazy" width="1200" height="379">
+                            <source srcset="images/phosphate_nodulation_fig-600.webp 600w, images/phosphate_nodulation_fig.webp 1200w" sizes="(max-width: 760px) 92vw, 704px" type="image/webp">
+                            <img src="images/phosphate_nodulation_fig-600.jpg" srcset="images/phosphate_nodulation_fig-600.jpg 600w, images/phosphate_nodulation_fig.jpg 1200w" sizes="(max-width: 760px) 92vw, 704px" alt="PvPHR-L7 RNAi increases, and over-expression decreases, nodulation in Phaseolus vulgaris." loading="lazy" width="1200" height="379">
                         </picture>
                     </a>
                     <figcaption><em>PvPHR-L7</em> RNAi increases nodulation, while over-expression decreases it, in common bean.</figcaption>
@@ -202,7 +205,7 @@
                 <figure class="fp-figure">
                     <a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener" aria-label="Open the paper">
                         <picture>
-                            <img src="images/ca_lysmrlk_phenotype.jpg" alt="Chickpea hairy roots: vector controls form many nodules, CaNFP-RNAi and CaLYK3-RNAi roots form almost none, and NIN expression falls in the knockdown lines." loading="lazy" width="1400" height="872">
+                            <img src="images/ca_lysmrlk_phenotype-800.jpg" srcset="images/ca_lysmrlk_phenotype-800.jpg 800w, images/ca_lysmrlk_phenotype.jpg 1400w" sizes="(max-width: 760px) 92vw, 704px" alt="Chickpea hairy roots: vector controls form many nodules, CaNFP-RNAi and CaLYK3-RNAi roots form almost none, and NIN expression falls in the knockdown lines." loading="lazy" width="1400" height="872">
                         </picture>
                     </a>
                     <figcaption>Vector-control chickpea roots form many nodules, whereas <em>NFP</em>-RNAi and <em>LYK3</em>-RNAi roots form almost none (A, B); <em>NIN</em> expression falls in the knockdown lines (C, D).</figcaption>
@@ -242,7 +245,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1007/s11738-026-03896-8" target="_blank" rel="noopener">doi.org/10.1007/s11738-026-03896-8</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/s11738-026-03896-8" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-s11738-026-03896-8.jpg" alt="Figure from: Genome-wide identification, characterization and expression analysis of SlIP5P gene family in tomato during tomato leaf curl New Delhi virus infection and salt stress" loading="lazy" width="1200" height="801">
+                        <img src="images/pubs/10-1007-s11738-026-03896-8-640.jpg" srcset="images/pubs/10-1007-s11738-026-03896-8-640.jpg 640w, images/pubs/10-1007-s11738-026-03896-8.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Genome-wide identification, characterization and expression analysis of SlIP5P gene family in tomato during tomato leaf curl New Delhi virus infection and salt stress" loading="lazy" width="1200" height="801">
                     </a>
                 </figure>
             </article>
@@ -256,7 +259,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">doi.org/10.1016/j.tplants.2026.01.001</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/graphical_abstract.png" alt="Figure from: Beyond Nitrogen: Phosphate Controls Root Nodule Symbiosis Commitment" loading="lazy" width="960" height="720">
+                        <img src="images/graphical_abstract-960.webp" alt="Figure from: Beyond Nitrogen: Phosphate Controls Root Nodule Symbiosis Commitment" loading="lazy" width="960" height="720">
                     </a>
                 </figure>
             </article>
@@ -276,7 +279,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-06-26-0051-CM</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/mpmi_sole_fig1.jpg" alt="Figure from: Secretory Circuits of Symbiosis in Medicago truncatula" loading="lazy" width="1600" height="1081">
+                        <img src="images/mpmi_sole_fig1-800.jpg" alt="Figure from: Secretory Circuits of Symbiosis in Medicago truncatula" loading="lazy" width="1600" height="1081">
                     </a>
                 </figure>
             </article>
@@ -288,7 +291,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1094/MPMI-11-25-0157-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-11-25-0157-CM</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1094/MPMI-11-25-0157-CM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1094-mpmi-11-25-0157-cm.jpg" alt="Figure from: When Mutualism Turns Parasitic: How Alfalfa Balances Cooperating and Cheating Rhizobia" loading="lazy" width="1200" height="898">
+                        <img src="images/pubs/10-1094-mpmi-11-25-0157-cm-640.jpg" srcset="images/pubs/10-1094-mpmi-11-25-0157-cm-640.jpg 640w, images/pubs/10-1094-mpmi-11-25-0157-cm.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: When Mutualism Turns Parasitic: How Alfalfa Balances Cooperating and Cheating Rhizobia" loading="lazy" width="1200" height="898">
                     </a>
                 </figure>
             </article>
@@ -307,7 +310,7 @@
                     <p class="pub-entry-doi"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcaf069</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/phosphate_nodulation_fig.jpg" alt="Figure from: Phosphate deficiency reduces nodule formation through a phosphate starvation response-like protein in Phaseolus vulgaris" loading="lazy" width="1200" height="379">
+                        <img src="images/phosphate_nodulation_fig-600.jpg" alt="Figure from: Phosphate deficiency reduces nodule formation through a phosphate starvation response-like protein in Phaseolus vulgaris" loading="lazy" width="1200" height="379">
                     </a>
                 </figure>
             </article>
@@ -321,7 +324,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1111/ppl.70556" target="_blank" rel="noopener">doi.org/10.1111/ppl.70556</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1111/ppl.70556" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1111-ppl-70556.jpg" alt="Figure from: PIN-FORMED Auxin Efflux Transporters in Abiotic Stress Adaptation: Mechanisms, Expression Dynamics, and Crop Improvement Potential" loading="lazy" width="1051" height="730">
+                        <img src="images/pubs/10-1111-ppl-70556-640.jpg" srcset="images/pubs/10-1111-ppl-70556-640.jpg 640w, images/pubs/10-1111-ppl-70556.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: PIN-FORMED Auxin Efflux Transporters in Abiotic Stress Adaptation: Mechanisms, Expression Dynamics, and Crop Improvement Potential" loading="lazy" width="1051" height="730">
                     </a>
                 </figure>
             </article>
@@ -335,7 +338,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1094/MPMI-09-25-0122-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-09-25-0122-CM</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1094/MPMI-09-25-0122-CM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1094-mpmi-09-25-0122-cm.jpg" alt="Figure from: Tracking Rust Effector Protein Delivery into Plant Cells" loading="lazy" width="1200" height="490">
+                        <img src="images/pubs/10-1094-mpmi-09-25-0122-cm-640.jpg" srcset="images/pubs/10-1094-mpmi-09-25-0122-cm-640.jpg 640w, images/pubs/10-1094-mpmi-09-25-0122-cm.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Tracking Rust Effector Protein Delivery into Plant Cells" loading="lazy" width="1200" height="490">
                     </a>
                 </figure>
             </article>
@@ -347,7 +350,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1094/MPMI-07-25-0078-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-07-25-0078-CM</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1094/MPMI-07-25-0078-CM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1094-mpmi-07-25-0078-cm.jpg" alt="Figure from: Metabolic Detour, Symbiotic Delay: Insights from Sinorhizobium meliloti Suppressor Mutants" loading="lazy" width="1200" height="695">
+                        <img src="images/pubs/10-1094-mpmi-07-25-0078-cm-640.jpg" srcset="images/pubs/10-1094-mpmi-07-25-0078-cm-640.jpg 640w, images/pubs/10-1094-mpmi-07-25-0078-cm.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Metabolic Detour, Symbiotic Delay: Insights from Sinorhizobium meliloti Suppressor Mutants" loading="lazy" width="1200" height="695">
                     </a>
                 </figure>
             </article>
@@ -359,7 +362,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1094/MPMI-05-25-0060-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-05-25-0060-CM</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1094/MPMI-05-25-0060-CM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1094-mpmi-05-25-0060-cm.jpg" alt="Figure from: A Viral Brake on Bloom: BYDV-GAV Delays Flowering via VOZ Degradation" loading="lazy" width="1200" height="825">
+                        <img src="images/pubs/10-1094-mpmi-05-25-0060-cm-640.jpg" srcset="images/pubs/10-1094-mpmi-05-25-0060-cm-640.jpg 640w, images/pubs/10-1094-mpmi-05-25-0060-cm.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: A Viral Brake on Bloom: BYDV-GAV Delays Flowering via VOZ Degradation" loading="lazy" width="1200" height="825">
                     </a>
                 </figure>
             </article>
@@ -382,7 +385,7 @@
                             <p class="pub-entry-doi"><a href="https://doi.org/10.1007/978-981-96-4253-3_6" target="_blank" rel="noopener">doi.org/10.1007/978-981-96-4253-3_6</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/978-981-96-4253-3_6" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-978-981-96-4253-3-6.jpg" alt="Figure from: Strategies for Increasing Zinc Uptake Efficiency in Plants" loading="lazy" width="1005" height="988">
+                        <img src="images/pubs/10-1007-978-981-96-4253-3-6-640.jpg" srcset="images/pubs/10-1007-978-981-96-4253-3-6-640.jpg 640w, images/pubs/10-1007-978-981-96-4253-3-6.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Strategies for Increasing Zinc Uptake Efficiency in Plants" loading="lazy" width="1005" height="988">
                     </a>
                 </figure>
             </article>
@@ -401,7 +404,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1007/s13562-024-00885-1" target="_blank" rel="noopener">doi.org/10.1007/s13562-024-00885-1</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/s13562-024-00885-1" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-s13562-024-00885-1.jpg" alt="Figure from: Arsenic tolerance unveiled in Arabidopsis: CPK23 and PHT1;1 alliance" loading="lazy" width="1200" height="1033">
+                        <img src="images/pubs/10-1007-s13562-024-00885-1-640.jpg" srcset="images/pubs/10-1007-s13562-024-00885-1-640.jpg 640w, images/pubs/10-1007-s13562-024-00885-1.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Arsenic tolerance unveiled in Arabidopsis: CPK23 and PHT1;1 alliance" loading="lazy" width="1200" height="1033">
                     </a>
                 </figure>
             </article>
@@ -420,7 +423,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1016/j.tplants.2023.12.003" target="_blank" rel="noopener">doi.org/10.1016/j.tplants.2023.12.003</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1016/j.tplants.2023.12.003" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1016-j-tplants-2023-12-003.jpg" alt="Figure from: Unlocking the plant ER stress code: IRE1-proteasome signaling cohort takes the lead" loading="lazy" width="1200" height="1208">
+                        <img src="images/pubs/10-1016-j-tplants-2023-12-003-640.jpg" srcset="images/pubs/10-1016-j-tplants-2023-12-003-640.jpg 640w, images/pubs/10-1016-j-tplants-2023-12-003.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Unlocking the plant ER stress code: IRE1-proteasome signaling cohort takes the lead" loading="lazy" width="1200" height="1208">
                     </a>
                 </figure>
             </article>
@@ -432,7 +435,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1016/j.tplants.2023.12.012" target="_blank" rel="noopener">doi.org/10.1016/j.tplants.2023.12.012</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1016/j.tplants.2023.12.012" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1016-j-tplants-2023-12-012.jpg" alt="Figure from: Unraveling the potential of the strigolactones-NSP1/NSP2 friendship in crop improvement" loading="lazy" width="1200" height="1093">
+                        <img src="images/pubs/10-1016-j-tplants-2023-12-012-640.jpg" srcset="images/pubs/10-1016-j-tplants-2023-12-012-640.jpg 640w, images/pubs/10-1016-j-tplants-2023-12-012.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Unraveling the potential of the strigolactones-NSP1/NSP2 friendship in crop improvement" loading="lazy" width="1200" height="1093">
                     </a>
                 </figure>
             </article>
@@ -446,7 +449,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1094/MPMI-12-24-0157-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-12-24-0157-CM</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1094/MPMI-12-24-0157-CM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1094-mpmi-12-24-0157-cm.jpg" alt="Figure from: Rethinking Growth and Defense: miR472 as a Sensor and Regulator of Plant Immunity" loading="lazy" width="1200" height="916">
+                        <img src="images/pubs/10-1094-mpmi-12-24-0157-cm-640.jpg" srcset="images/pubs/10-1094-mpmi-12-24-0157-cm-640.jpg 640w, images/pubs/10-1094-mpmi-12-24-0157-cm.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Rethinking Growth and Defense: miR472 as a Sensor and Regulator of Plant Immunity" loading="lazy" width="1200" height="916">
                     </a>
                 </figure>
             </article>
@@ -458,7 +461,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1094/MPMI-09-24-0109-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-09-24-0109-CM</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1094/MPMI-09-24-0109-CM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1094-mpmi-09-24-0109-cm.jpg" alt="Figure from: Decoding the Fancy Coat Worn by Rhizobia in Symbiosis" loading="lazy" width="1200" height="963">
+                        <img src="images/pubs/10-1094-mpmi-09-24-0109-cm-640.jpg" srcset="images/pubs/10-1094-mpmi-09-24-0109-cm-640.jpg 640w, images/pubs/10-1094-mpmi-09-24-0109-cm.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Decoding the Fancy Coat Worn by Rhizobia in Symbiosis" loading="lazy" width="1200" height="963">
                     </a>
                 </figure>
             </article>
@@ -470,7 +473,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1094/MPMI-07-24-0077-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-07-24-0077-CM</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1094/MPMI-07-24-0077-CM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1094-mpmi-07-24-0077-cm.jpg" alt="Figure from: Fortifying Plant Armor: CESA3 Enhances Arabidopsis thaliana’s Defense Against Bacterial Wilt Under Heat Stress" loading="lazy" width="1200" height="930">
+                        <img src="images/pubs/10-1094-mpmi-07-24-0077-cm-640.jpg" srcset="images/pubs/10-1094-mpmi-07-24-0077-cm-640.jpg 640w, images/pubs/10-1094-mpmi-07-24-0077-cm.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Fortifying Plant Armor: CESA3 Enhances Arabidopsis thaliana’s Defense Against Bacterial Wilt Under Heat Stress" loading="lazy" width="1200" height="930">
                     </a>
                 </figure>
             </article>
@@ -485,7 +488,7 @@
                             <p class="pub-entry-doi"><a href="https://doi.org/10.1007/978-3-031-61081-3_3" target="_blank" rel="noopener">doi.org/10.1007/978-3-031-61081-3_3</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/978-3-031-61081-3_3" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-978-3-031-61081-3-3.jpg" alt="Figure from: Molecular Techniques for the Improvement of Abiotic Stress Tolerance in Plants" loading="lazy" width="999" height="721">
+                        <img src="images/pubs/10-1007-978-3-031-61081-3-3-640.jpg" srcset="images/pubs/10-1007-978-3-031-61081-3-3-640.jpg 640w, images/pubs/10-1007-978-3-031-61081-3-3.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Molecular Techniques for the Improvement of Abiotic Stress Tolerance in Plants" loading="lazy" width="999" height="721">
                     </a>
                 </figure>
             </article>
@@ -498,7 +501,7 @@
                             <p class="pub-entry-doi"><a href="https://doi.org/10.1007/978-3-031-70203-7_13" target="_blank" rel="noopener">doi.org/10.1007/978-3-031-70203-7_13</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/978-3-031-70203-7_13" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-978-3-031-70203-7-13.jpg" alt="Figure from: Biotechnological Insights into Cold-Stressed, Adapted Microorganisms for Plant Health and Soil Improvement" loading="lazy" width="1013" height="726">
+                        <img src="images/pubs/10-1007-978-3-031-70203-7-13-640.jpg" srcset="images/pubs/10-1007-978-3-031-70203-7-13-640.jpg 640w, images/pubs/10-1007-978-3-031-70203-7-13.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Biotechnological Insights into Cold-Stressed, Adapted Microorganisms for Plant Health and Soil Improvement" loading="lazy" width="1013" height="726">
                     </a>
                 </figure>
             </article>
@@ -525,7 +528,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1016/j.stress.2023.100165" target="_blank" rel="noopener">doi.org/10.1016/j.stress.2023.100165</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1016/j.stress.2023.100165" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1016-j-stress-2023-100165.jpg" alt="Figure from: Genome-wide identification and expression analysis of glycogen synthase kinase encoding genes in foxtail millet (Setaria italica L.) under salinity, dehydration, and oxidative stress" loading="lazy" width="883" height="867">
+                        <img src="images/pubs/10-1016-j-stress-2023-100165-640.jpg" srcset="images/pubs/10-1016-j-stress-2023-100165-640.jpg 640w, images/pubs/10-1016-j-stress-2023-100165.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Genome-wide identification and expression analysis of glycogen synthase kinase encoding genes in foxtail millet (Setaria italica L.) under salinity, dehydration, and oxidative stress" loading="lazy" width="883" height="867">
                     </a>
                 </figure>
             </article>
@@ -537,7 +540,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1007/s00344-023-10971-8" target="_blank" rel="noopener">doi.org/10.1007/s00344-023-10971-8</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/s00344-023-10971-8" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-s00344-023-10971-8.jpg" alt="Figure from: Genome-wide identification of SWEET genes in Cicer arietinum and modulation of its expression in endophytic interactions with Serendipita indica" loading="lazy" width="1200" height="1441">
+                        <img src="images/pubs/10-1007-s00344-023-10971-8-640.jpg" srcset="images/pubs/10-1007-s00344-023-10971-8-640.jpg 640w, images/pubs/10-1007-s00344-023-10971-8.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Genome-wide identification of SWEET genes in Cicer arietinum and modulation of its expression in endophytic interactions with Serendipita indica" loading="lazy" width="1200" height="1441">
                     </a>
                 </figure>
             </article>
@@ -551,7 +554,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener">doi.org/10.1111/nph.18627</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1111-nph-18627.jpg" alt="Figure from: Discovering the genetic modules controlling root nodule symbiosis under abiotic stresses: salinity as a case study" loading="lazy" width="1032" height="960">
+                        <img src="images/pubs/10-1111-nph-18627-640.jpg" srcset="images/pubs/10-1111-nph-18627-640.jpg 640w, images/pubs/10-1111-nph-18627.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Discovering the genetic modules controlling root nodule symbiosis under abiotic stresses: salinity as a case study" loading="lazy" width="1032" height="960">
                     </a>
                 </figure>
             </article>
@@ -563,7 +566,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener">doi.org/10.1007/s00425-023-04090-7</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-s00425-023-04090-7.jpg" alt="Figure from: Role of Nod factor receptors and its allies involved in nitrogen fixation" loading="lazy" width="1051" height="593">
+                        <img src="images/pubs/10-1007-s00425-023-04090-7-640.jpg" srcset="images/pubs/10-1007-s00425-023-04090-7-640.jpg 640w, images/pubs/10-1007-s00425-023-04090-7.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Role of Nod factor receptors and its allies involved in nitrogen fixation" loading="lazy" width="1051" height="593">
                     </a>
                 </figure>
             </article>
@@ -575,7 +578,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcad059</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1093-pcp-pcad059.jpg" alt="Figure from: Harnessing the potential of symbiotic associations of plants in phosphate-deficient soil for sustainable agriculture" loading="lazy" width="1051" height="781">
+                        <img src="images/pubs/10-1093-pcp-pcad059-640.jpg" srcset="images/pubs/10-1093-pcp-pcad059-640.jpg 640w, images/pubs/10-1093-pcp-pcad059.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Harnessing the potential of symbiotic associations of plants in phosphate-deficient soil for sustainable agriculture" loading="lazy" width="1051" height="781">
                     </a>
                 </figure>
             </article>
@@ -587,7 +590,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1007/s10142-023-01207-9" target="_blank" rel="noopener">doi.org/10.1007/s10142-023-01207-9</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/s10142-023-01207-9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-s10142-023-01207-9.jpg" alt="Figure from: Interplay of calcium signaling and ERF-VII stability in plant hypoxia tolerance" loading="lazy" width="1200" height="890">
+                        <img src="images/pubs/10-1007-s10142-023-01207-9-640.jpg" srcset="images/pubs/10-1007-s10142-023-01207-9-640.jpg 640w, images/pubs/10-1007-s10142-023-01207-9.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Interplay of calcium signaling and ERF-VII stability in plant hypoxia tolerance" loading="lazy" width="1200" height="890">
                     </a>
                 </figure>
             </article>
@@ -608,7 +611,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1007/s00299-023-02979-x" target="_blank" rel="noopener">doi.org/10.1007/s00299-023-02979-x</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/s00299-023-02979-x" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-s00299-023-02979-x.jpg" alt="Figure from: AUR1 and its pals: orchestration of intracellular rhizobia infection in legume for nitrogen fixation" loading="lazy" width="1200" height="672">
+                        <img src="images/pubs/10-1007-s00299-023-02979-x-640.jpg" srcset="images/pubs/10-1007-s00299-023-02979-x-640.jpg 640w, images/pubs/10-1007-s00299-023-02979-x.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: AUR1 and its pals: orchestration of intracellular rhizobia infection in legume for nitrogen fixation" loading="lazy" width="1200" height="672">
                     </a>
                 </figure>
             </article>
@@ -620,7 +623,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1016/j.tplants.2022.11.005" target="_blank" rel="noopener">doi.org/10.1016/j.tplants.2022.11.005</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1016/j.tplants.2022.11.005" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1016-j-tplants-2022-11-005.jpg" alt="Figure from: A nodule peptide confiscates haem to promote iron uptake in rhizobia" loading="lazy" width="997" height="1587">
+                        <img src="images/pubs/10-1016-j-tplants-2022-11-005-640.jpg" srcset="images/pubs/10-1016-j-tplants-2022-11-005-640.jpg 640w, images/pubs/10-1016-j-tplants-2022-11-005.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: A nodule peptide confiscates haem to promote iron uptake in rhizobia" loading="lazy" width="997" height="1587">
                     </a>
                 </figure>
             </article>
@@ -635,7 +638,7 @@
                             <p class="pub-entry-doi"><a href="https://doi.org/10.1016/B978-0-323-90613-5.00020-0" target="_blank" rel="noopener">doi.org/10.1016/B978-0-323-90613-5.00020-0</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1016/B978-0-323-90613-5.00020-0" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1016-b978-0-323-90613-5-00020-0.jpg" alt="Figure from: Plant transcription factors and nodule development" loading="lazy" width="951" height="714">
+                        <img src="images/pubs/10-1016-b978-0-323-90613-5-00020-0-640.jpg" srcset="images/pubs/10-1016-b978-0-323-90613-5-00020-0-640.jpg 640w, images/pubs/10-1016-b978-0-323-90613-5-00020-0.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Plant transcription factors and nodule development" loading="lazy" width="951" height="714">
                     </a>
                 </figure>
             </article>
@@ -662,7 +665,7 @@
                     <p class="pub-entry-doi"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">doi.org/10.1016/j.envexpbot.2022.104999</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/ca_lysmrlk_phenotype.jpg" alt="Figure from: Genome-wide identification, expression, and characterization of CaLysM-RLKs in chickpea root nodule symbiosis" loading="lazy" width="1400" height="872">
+                        <img src="images/ca_lysmrlk_phenotype-800.jpg" alt="Figure from: Genome-wide identification, expression, and characterization of CaLysM-RLKs in chickpea root nodule symbiosis" loading="lazy" width="1400" height="872">
                     </a>
                 </figure>
             </article>
@@ -674,7 +677,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1007/s00344-021-10424-0" target="_blank" rel="noopener">doi.org/10.1007/s00344-021-10424-0</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/s00344-021-10424-0" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-s00344-021-10424-0.jpg" alt="Figure from: Evaluation of multiple salinity tolerance indices for screening and comparative biochemical and molecular analysis of pearl millet [Pennisetum glaucum (L.) R. Br.] genotypes" loading="lazy" width="1051" height="901">
+                        <img src="images/pubs/10-1007-s00344-021-10424-0-640.jpg" srcset="images/pubs/10-1007-s00344-021-10424-0-640.jpg 640w, images/pubs/10-1007-s00344-021-10424-0.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Evaluation of multiple salinity tolerance indices for screening and comparative biochemical and molecular analysis of pearl millet [Pennisetum glaucum (L.) R. Br.] genotypes" loading="lazy" width="1051" height="901">
                     </a>
                 </figure>
             </article>
@@ -686,7 +689,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1111/ppl.13605" target="_blank" rel="noopener">doi.org/10.1111/ppl.13605</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1111/ppl.13605" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1111-ppl-13605.jpg" alt="Figure from: Integrated physiological and comparative proteomics analysis of contrasting genotypes of pearl millet reveals underlying salt-responsive mechanisms" loading="lazy" width="1051" height="1366">
+                        <img src="images/pubs/10-1111-ppl-13605-640.jpg" srcset="images/pubs/10-1111-ppl-13605-640.jpg 640w, images/pubs/10-1111-ppl-13605.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Integrated physiological and comparative proteomics analysis of contrasting genotypes of pearl millet reveals underlying salt-responsive mechanisms" loading="lazy" width="1051" height="1366">
                     </a>
                 </figure>
             </article>
@@ -705,7 +708,7 @@
                 <p class="pub-entry-doi"><a href="https://doi.org/10.1016/j.tplants.2021.07.001" target="_blank" rel="noopener">doi.org/10.1016/j.tplants.2021.07.001</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1016/j.tplants.2021.07.001" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1016-j-tplants-2021-07-001.jpg" alt="Figure from: NSP1 allies with GSK3 to inhibit nodule symbiosis" loading="lazy" width="987" height="997">
+                        <img src="images/pubs/10-1016-j-tplants-2021-07-001-640.jpg" srcset="images/pubs/10-1016-j-tplants-2021-07-001-640.jpg 640w, images/pubs/10-1016-j-tplants-2021-07-001.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: NSP1 allies with GSK3 to inhibit nodule symbiosis" loading="lazy" width="987" height="997">
                     </a>
                 </figure>
             </article>
@@ -725,7 +728,7 @@
                             <p class="pub-entry-doi"><a href="https://doi.org/10.1007/978-981-15-4055-4_14" target="_blank" rel="noopener">doi.org/10.1007/978-981-15-4055-4_14</a></p>
                 <figure class="pub-entry-fig">
                     <a href="https://doi.org/10.1007/978-981-15-4055-4_14" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                        <img src="images/pubs/10-1007-978-981-15-4055-4-14.jpg" alt="Figure from: Functional characterization of genes involved in legume nodulation using hairy root cultures" loading="lazy" width="1005" height="1495">
+                        <img src="images/pubs/10-1007-978-981-15-4055-4-14-640.jpg" srcset="images/pubs/10-1007-978-981-15-4055-4-14-640.jpg 640w, images/pubs/10-1007-978-981-15-4055-4-14.jpg 1200w" sizes="(max-width: 760px) 92vw, 512px" alt="Figure from: Functional characterization of genes involved in legume nodulation using hairy root cultures" loading="lazy" width="1005" height="1495">
                     </a>
                 </figure>
             </article>
@@ -743,7 +746,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=20260809"></script>
+    <script src="js/main.js?v=20261025"></script>
     <script>
     // ===== Client-side publication filter (search + type facets) =====
     (function () {

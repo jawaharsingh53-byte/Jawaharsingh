@@ -38,7 +38,7 @@
     window.addEventListener('scroll', function () {
         if (!ticking) { ticking = true; requestAnimationFrame(update); }
     }, { passive: true });
-    update();
+    requestAnimationFrame(update);   // first check on the next frame: no forced layout during load
 })();
 
 // ===== Mobile nav toggle (exposes state to assistive tech) =====

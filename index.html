@@ -54,8 +54,10 @@
     <!-- Fonts & stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261025a">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"></noscript>
+    <link rel="stylesheet" href="css/style.css?v=20261025b">
 
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c2b40b963024a48b41af28e77da9bd5"}'></script>
@@ -459,32 +461,32 @@
             <div class="container stats-grid stats-grid-crops">
                 <div class="stat-item stat-crop">
                     <picture>
-                        <source srcset="images/crops/chickpea.webp" type="image/webp">
-                        <img src="images/crops/chickpea.jpg" alt="Chickpea (Cicer arietinum) flower" width="600" height="600" loading="lazy">
+                        <source srcset="images/crops/chickpea-192.webp 192w, images/crops/chickpea.webp 600w" sizes="96px" type="image/webp">
+                        <img src="images/crops/chickpea-192.jpg" srcset="images/crops/chickpea-192.jpg 192w, images/crops/chickpea.jpg 600w" sizes="96px" alt="Chickpea (Cicer arietinum) flower" width="192" height="192" loading="lazy">
                     </picture>
                     <span class="stat-label">Chickpea</span>
                     <span class="stat-latin">Cicer arietinum</span>
                 </div>
                 <div class="stat-item stat-crop">
                     <picture>
-                        <source srcset="images/crops/commonbean.webp" type="image/webp">
-                        <img src="images/crops/commonbean.jpg" alt="Common bean (Phaseolus vulgaris) seedling" width="600" height="600" loading="lazy">
+                        <source srcset="images/crops/commonbean-192.webp 192w, images/crops/commonbean.webp 600w" sizes="96px" type="image/webp">
+                        <img src="images/crops/commonbean-192.jpg" srcset="images/crops/commonbean-192.jpg 192w, images/crops/commonbean.jpg 600w" sizes="96px" alt="Common bean (Phaseolus vulgaris) seedling" width="192" height="192" loading="lazy">
                     </picture>
                     <span class="stat-label">Common bean</span>
                     <span class="stat-latin">Phaseolus vulgaris</span>
                 </div>
                 <div class="stat-item stat-crop">
                     <picture>
-                        <source srcset="images/crops/soybean.webp" type="image/webp">
-                        <img src="images/crops/soybean.jpg" alt="Soybean (Glycine max) pods" width="600" height="600" loading="lazy">
+                        <source srcset="images/crops/soybean-192.webp 192w, images/crops/soybean.webp 600w" sizes="96px" type="image/webp">
+                        <img src="images/crops/soybean-192.jpg" srcset="images/crops/soybean-192.jpg 192w, images/crops/soybean.jpg 600w" sizes="96px" alt="Soybean (Glycine max) pods" width="192" height="192" loading="lazy">
                     </picture>
                     <span class="stat-label">Soybean</span>
                     <span class="stat-latin">Glycine max</span>
                 </div>
                 <div class="stat-item stat-crop">
                     <picture>
-                        <source srcset="images/crops/cowpea.webp" type="image/webp">
-                        <img src="images/crops/cowpea.jpg" alt="Cowpea (Vigna unguiculata) plants in the growth room" width="600" height="600" loading="lazy">
+                        <source srcset="images/crops/cowpea-192.webp 192w, images/crops/cowpea.webp 600w" sizes="96px" type="image/webp">
+                        <img src="images/crops/cowpea-192.jpg" srcset="images/crops/cowpea-192.jpg 192w, images/crops/cowpea.jpg 600w" sizes="96px" alt="Cowpea (Vigna unguiculata) plants in the growth room" width="192" height="192" loading="lazy">
                     </picture>
                     <span class="stat-label">Cowpea</span>
                     <span class="stat-latin">Vigna unguiculata</span>
@@ -506,7 +508,7 @@
                 <article class="research-row fade-in">
                     <div class="research-row-head">
                         <div class="card-icon">
-                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+                            <svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
                         </div>
                         <div>
                             <h3>Phosphate and nodulation</h3>
@@ -517,8 +519,8 @@
                     <p class="research-row-text"><strong>We showed for the first time that a phosphate-starvation transcription factor, PHR-L7, binds and regulates the master nodulation gene <em>NIN</em></strong>, so phosphate availability helps decide whether a legume commits to forming nitrogen-fixing nodules.</p>
                     <figure class="abstract-figure fade-in">
                         <picture>
-                            <source srcset="images/phosphate_nodulation_abstract.webp" type="image/webp">
-                            <img src="images/phosphate_nodulation_abstract.jpg" alt="Adequate Pi: SPX sequesters PHR-L7 and NIN is expressed, enabling symbiosis. Low Pi: PHR-L7 is active, NIN is repressed, no symbiosis." loading="lazy" width="1201" height="695">
+                            <source srcset="images/phosphate_nodulation_abstract-600.webp 600w, images/phosphate_nodulation_abstract-800.webp 800w, images/phosphate_nodulation_abstract.webp 1201w" sizes="(max-width: 640px) 92vw, 880px" type="image/webp">
+                            <img src="images/phosphate_nodulation_abstract-600.jpg" srcset="images/phosphate_nodulation_abstract-600.jpg 600w, images/phosphate_nodulation_abstract-800.jpg 800w, images/phosphate_nodulation_abstract.jpg 1201w" sizes="(max-width: 640px) 92vw, 880px" alt="Adequate Pi: SPX sequesters PHR-L7 and NIN is expressed, enabling symbiosis. Low Pi: PHR-L7 is active, NIN is repressed, no symbiosis." loading="lazy" width="1201" height="695">
                         </picture>
                         <figcaption class="abstract-caption-split">
                             <span class="abstract-caption-half abstract-caption-left">Under adequate phosphate, SPX sequesters PHR-L7 (inactive) and <em>NIN</em> is expressed, enabling symbiosis.</span>
@@ -531,7 +533,7 @@
                     <!-- Takeaway -- sits inside the Phosphate-Nodulation card -->
                     <div class="key-takeaway key-takeaway-full fade-in">
                         <div class="takeaway-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                         </div>
                         <p class="takeaway-text">Phosphate is a gatekeeper that determines whether legumes commit to nitrogen-fixing symbiosis.</p>
                     </div>
@@ -546,7 +548,7 @@
                 <article class="research-row research-row-compact fade-in">
                     <div class="research-row-head">
                         <div class="card-icon">
-                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 36V20h8v16M28 36V12h8v24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 36h32" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="14" r="3" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="8" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                            <svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 36V20h8v16M28 36V12h8v24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 36h32" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="14" r="3" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="8" r="3" stroke="currentColor" stroke-width="2"/></svg>
                         </div>
                         <div>
                             <h3>Engineering nitrogen fixation in crop legumes</h3>
@@ -579,8 +581,8 @@
             <aside class="latest-callout fade-in" id="latest" aria-label="Latest publication">
                 <a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" class="latest-thumb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
                     <picture>
-                        <source srcset="images/mpmi_sole_fig1.webp" type="image/webp">
-                        <img src="images/mpmi_sole_fig1.jpg" alt="" loading="lazy" width="1600" height="1081">
+                        <source srcset="images/mpmi_sole_fig1-320.webp 320w, images/mpmi_sole_fig1-800.webp 800w" sizes="(max-width: 600px) 220px, 160px" type="image/webp">
+                        <img src="images/mpmi_sole_fig1-320.jpg" srcset="images/mpmi_sole_fig1-320.jpg 320w, images/mpmi_sole_fig1-800.jpg 800w" sizes="(max-width: 600px) 220px, 160px" alt="" loading="lazy" width="320" height="216">
                     </picture>
                 </a>
                 <div class="latest-body">
@@ -799,7 +801,7 @@
             <div class="service-grid">
                 <div class="service-item fade-in">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
                     </div>
                     <h3>Assistant Features Editor</h3>
                     <p><em>Molecular Plant-Microbe Interactions</em> (MPMI), 2024&ndash;present. I write plain-language summaries, author interviews and commentaries for the journal.</p>
@@ -807,15 +809,15 @@
 
                 <div class="service-item fade-in">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
                     </div>
                     <h3>Conferences</h3>
-                    <p>Co-organizer and chair of the satellite meeting "Building Careers in MPMI through Effective Mentoring" at the IS-MPMI Congress 2025, Cologne. Poster judge for Best Poster Award. Mini-symposium co-organizer at Sainsbury Laboratory.</p>
+                    <p>Co-organizer and chair of the satellite meeting “Building Careers in MPMI through Effective Mentoring” at the IS-MPMI Congress 2025, Cologne. Poster judge for Best Poster Award. Mini-symposium co-organizer at Sainsbury Laboratory.</p>
                 </div>
 
                 <div class="service-item fade-in">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                     <h3>Peer review</h3>
                     <p>Reviewer for <em>The Plant Cell</em>, <em>New Phytologist</em>, <em>The Plant Journal</em>, <em>Journal of Experimental Botany</em>, <em>Frontiers in Plant Science</em>, <em>BMC Plant Biology</em>, and <em>Scientific Reports</em>.</p>
@@ -823,7 +825,7 @@
 
                 <div class="service-item fade-in">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
                     </div>
                     <h3>Awards and fellowships</h3>
                     <p>DGAPA Postdoctoral Fellowship (UNAM, Mexico). CSIR-UGC Senior &amp; Junior Research Fellowships (India). GATE qualified. Swachhta Saarthi Fellowship (Govt. of India).</p>
@@ -841,14 +843,14 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         <div>
                             <h3>Email</h3>
                             <a href="mailto:Jawahar.Singh@slcu.cam.ac.uk">Jawahar.Singh@slcu.cam.ac.uk</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         <div>
                             <h3>Address</h3>
                             <p>Sainsbury Laboratory<br>University of Cambridge<br>47 Bateman Street<br>Cambridge CB2 1LR, UK</p>
@@ -857,31 +859,31 @@
                 </div>
                 <div class="contact-links">
                     <a href="Jawahar_Singh_CV.pdf" class="social-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
                         Curriculum Vitae (PDF)
                     </a>
                     <a href="https://www.slcu.cam.ac.uk/people/jawahar-singh" class="social-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
                         Cambridge Profile
                     </a>
                     <a href="https://scholar.google.com/citations?user=mANYUGQAAAAJ&amp;hl=en" class="social-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
                         Google Scholar
                     </a>
                     <a href="https://orcid.org/0000-0003-4893-741X" class="social-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.834-1.209-3.722-3.853-3.722h-2.466z"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.834-1.209-3.722-3.853-3.722h-2.466z"/></svg>
                         ORCID
                     </a>
                     <a href="https://www.linkedin.com/in/jawahar-singh-phd-57892068/" class="social-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         LinkedIn
                     </a>
                     <a href="https://twitter.com/IamJawaharSingh" class="social-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         Twitter / X
                     </a>
                     <a href="https://www.researchgate.net/profile/Jawahar-Singh" class="social-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016 0 .395.004.734.013 1.017a9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h.001c.027.134.064.279.111.435.243.745.65 1.305 1.213 1.681.565.377 1.255.564 2.073.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.59.156-.45.249-.95.276-1.498.014-.275.022-.658.022-1.115v-.92h-3.474v.92h.967v.391c0 .234-.004.391-.013.484a2.487 2.487 0 0 1-.114.572c-.1.298-.276.557-.514.715-.238.158-.555.235-.95.235-.405 0-.74-.087-.984-.265-.244-.178-.43-.434-.527-.756a2.96 2.96 0 0 1-.097-.456 7.394 7.394 0 0 1-.06-.6 26.804 26.804 0 0 1-.038-1.601c0-.602.014-1.064.045-1.394.018-.166.043-.32.077-.456.094-.323.275-.582.518-.762.243-.18.575-.273.978-.273.405 0 .72.084.953.249.232.166.395.392.488.679.043.13.07.27.084.41.014.142.022.323.022.541v.392h3.473v-.092c0-.305-.013-.587-.044-.847a4.41 4.41 0 0 0-.179-.85 3.49 3.49 0 0 0-.39-.85 3.6 3.6 0 0 0-.673-.747 3.27 3.27 0 0 0-1.04-.566c-.41-.13-.872-.196-1.387-.196zM8.217 5.667c-1.005 0-1.92.183-2.74.55-.821.366-1.52.872-2.097 1.518a6.74 6.74 0 0 0-1.32 2.232c-.308.852-.461 1.755-.461 2.71v.06c0 .955.153 1.858.46 2.71.31.853.748 1.597 1.32 2.232.578.646 1.277 1.152 2.098 1.518.82.367 1.735.55 2.74.55.998 0 1.91-.183 2.732-.55.82-.366 1.52-.872 2.097-1.518a6.74 6.74 0 0 0 1.32-2.232c.308-.852.46-1.755.46-2.71v-.06c0-.955-.152-1.858-.46-2.71a6.74 6.74 0 0 0-1.32-2.232c-.578-.646-1.277-1.152-2.097-1.518-.821-.367-1.734-.55-2.732-.55zm0 2.255c.51 0 .969.103 1.375.31.405.207.748.494 1.029.86.28.367.494.798.643 1.292.148.495.222 1.027.222 1.595v.06c0 .569-.074 1.1-.222 1.595-.149.494-.363.925-.643 1.292-.281.366-.624.653-1.03.86-.405.207-.864.31-1.374.31-.51 0-.97-.103-1.375-.31a3.16 3.16 0 0 1-1.03-.86 4.103 4.103 0 0 1-.643-1.292 5.554 5.554 0 0 1-.222-1.595v-.06c0-.568.074-1.1.222-1.595a4.103 4.103 0 0 1 .643-1.292 3.16 3.16 0 0 1 1.03-.86 3.066 3.066 0 0 1 1.375-.31z"/></svg>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016 0 .395.004.734.013 1.017a9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h.001c.027.134.064.279.111.435.243.745.65 1.305 1.213 1.681.565.377 1.255.564 2.073.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.59.156-.45.249-.95.276-1.498.014-.275.022-.658.022-1.115v-.92h-3.474v.92h.967v.391c0 .234-.004.391-.013.484a2.487 2.487 0 0 1-.114.572c-.1.298-.276.557-.514.715-.238.158-.555.235-.95.235-.405 0-.74-.087-.984-.265-.244-.178-.43-.434-.527-.756a2.96 2.96 0 0 1-.097-.456 7.394 7.394 0 0 1-.06-.6 26.804 26.804 0 0 1-.038-1.601c0-.602.014-1.064.045-1.394.018-.166.043-.32.077-.456.094-.323.275-.582.518-.762.243-.18.575-.273.978-.273.405 0 .72.084.953.249.232.166.395.392.488.679.043.13.07.27.084.41.014.142.022.323.022.541v.392h3.473v-.092c0-.305-.013-.587-.044-.847a4.41 4.41 0 0 0-.179-.85 3.49 3.49 0 0 0-.39-.85 3.6 3.6 0 0 0-.673-.747 3.27 3.27 0 0 0-1.04-.566c-.41-.13-.872-.196-1.387-.196zM8.217 5.667c-1.005 0-1.92.183-2.74.55-.821.366-1.52.872-2.097 1.518a6.74 6.74 0 0 0-1.32 2.232c-.308.852-.461 1.755-.461 2.71v.06c0 .955.153 1.858.46 2.71.31.853.748 1.597 1.32 2.232.578.646 1.277 1.152 2.098 1.518.82.367 1.735.55 2.74.55.998 0 1.91-.183 2.732-.55.82-.366 1.52-.872 2.097-1.518a6.74 6.74 0 0 0 1.32-2.232c.308-.852.46-1.755.46-2.71v-.06c0-.955-.152-1.858-.46-2.71a6.74 6.74 0 0 0-1.32-2.232c-.578-.646-1.277-1.152-2.097-1.518-.821-.367-1.734-.55-2.732-.55zm0 2.255c.51 0 .969.103 1.375.31.405.207.748.494 1.029.86.28.367.494.798.643 1.292.148.495.222 1.027.222 1.595v.06c0 .569-.074 1.1-.222 1.595-.149.494-.363.925-.643 1.292-.281.366-.624.653-1.03.86-.405.207-.864.31-1.374.31-.51 0-.97-.103-1.375-.31a3.16 3.16 0 0 1-1.03-.86 4.103 4.103 0 0 1-.643-1.292 5.554 5.554 0 0 1-.222-1.595v-.06c0-.568.074-1.1.222-1.595a4.103 4.103 0 0 1 .643-1.292 3.16 3.16 0 0 1 1.03-.86 3.066 3.066 0 0 1 1.375-.31z"/></svg>
                         ResearchGate
                     </a>
                 </div>
@@ -899,6 +901,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=20260809"></script>
+    <script src="js/main.js?v=20261025"></script>
 </body>
 </html>
