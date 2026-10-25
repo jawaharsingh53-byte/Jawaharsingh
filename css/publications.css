@@ -413,3 +413,52 @@
         margin: 0 0 12px;
     }
 }
+
+/* ===== Titles justified (wide screens), figures centred at one size ===== */
+@media (min-width: 900px) {
+    .pub-entry-title,
+    .fp-title,
+    .pub-entry-summary,
+    .fp-summary {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: manual;
+        text-wrap: wrap;   /* override the site-wide balanced headings here */
+    }
+}
+
+/* Every figure sits centred in the text column at the same width;
+   tall figures are capped in height and centred in that frame */
+.pub-entry-fig,
+.fp-figure {
+    text-align: center;
+}
+
+.pub-entry-fig {
+    margin: 16px 0 0;
+}
+
+.pub-entry-fig a,
+.fp-figure a {
+    display: block;
+    line-height: 0;
+}
+
+.pub-entry-fig img,
+.fp-figure img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 36rem;
+    height: auto;
+    max-height: 26rem;
+    object-fit: contain;
+    background: transparent;
+}
+
+.fp-figure figcaption {
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
