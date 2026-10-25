@@ -2531,3 +2531,47 @@ a.card-tag-link:hover {
 h1, h2, h3, h4 {
     text-wrap: balance;
 }
+
+/* =====================================================================
+   Colour discipline (25 Oct 2026): teal marks only things you can click
+   (links, buttons) and the year numbers. Everything else is ink or grey.
+   ===================================================================== */
+.hero-manifesto,
+.hero-affiliation,
+.research-question {
+    color: var(--dark);
+}
+
+.card-highlight,
+.research-row-head .card-highlight,
+.latest-label,
+.timeline-date,
+.pub-impact {
+    color: var(--text-light);
+}
+
+.pub-impact {
+    font-style: normal;
+}
+
+/* Dates sit as plain text, not in tinted chips */
+.timeline-date {
+    background: none;
+    padding: 0;
+    font-weight: 600;
+}
+
+/* Tags: neutral outline instead of teal-tinted chips */
+.badge,
+.card-tag,
+.program-tags span {
+    color: var(--text-light);
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+a.badge:hover,
+a.badge:focus-visible {
+    color: var(--dark);
+    border-color: var(--text-light);
+}
