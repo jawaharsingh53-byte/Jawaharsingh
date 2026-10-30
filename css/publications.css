@@ -462,3 +462,32 @@
     margin-right: auto;
     text-align: left;
 }
+
+/* Justified titles and summaries on every screen size; phones hyphenate
+   ordinary words (never italic gene/species names) to keep spacing even */
+.pub-entry-title,
+.fp-title,
+.pub-entry-summary,
+.fp-summary {
+    text-align: justify;
+    text-justify: inter-word;
+    text-wrap: wrap;
+}
+
+@media (max-width: 899px) {
+    .pub-entry-title,
+    .fp-title,
+    .pub-entry-summary,
+    .fp-summary {
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphenate-limit-chars: 7 3 3;
+    }
+    .pub-entry-title em,
+    .fp-title em,
+    .pub-entry-summary em,
+    .fp-summary em {
+        hyphens: manual;
+        -webkit-hyphens: manual;
+    }
+}

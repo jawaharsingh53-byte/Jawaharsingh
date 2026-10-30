@@ -2575,3 +2575,50 @@ a.badge:focus-visible {
     color: var(--dark);
     border-color: var(--text-light);
 }
+
+/* =====================================================================
+   Justified paragraphs on every screen size (30 Oct 2026).
+   Phones and tablets add hyphenation so narrow columns keep even word
+   spacing; italic/bold terms (gene and species names) never break.
+   ===================================================================== */
+.hero-lede,
+.research-row-text,
+.research-evidence,
+.research-approach li,
+.about-text p,
+.timeline-content p,
+.vision-intro p,
+.program-card p,
+.teaching-card p,
+.service-item p,
+.latest-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+@media (max-width: 899px) {
+    .hero-lede,
+    .research-row-text,
+    .research-evidence,
+    .research-approach li,
+    .about-text p,
+    .timeline-content p,
+    .vision-intro p,
+    .program-card p,
+    .teaching-card p,
+    .service-item p,
+    .latest-text {
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphenate-limit-chars: 7 3 3;
+    }
+    .hero-lede :is(em, i, strong, a),
+    .research-row-text :is(em, i, strong, a),
+    .research-evidence :is(em, i, strong, a),
+    .about-text p :is(em, i, strong, a),
+    .timeline-content p :is(em, i, strong, a),
+    .program-card p :is(em, i, strong, a) {
+        hyphens: manual;
+        -webkit-hyphens: manual;
+    }
+}
