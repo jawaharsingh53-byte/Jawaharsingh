@@ -42,6 +42,7 @@
 
     <!-- Set theme before paint to avoid a flash of the wrong colour scheme -->
     <script>
+      document.documentElement.classList.add('js');
       (function () {
         try {
           var stored = localStorage.getItem('theme');
@@ -57,7 +58,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" as="style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"></noscript>
-    <link rel="stylesheet" href="css/style.css?v=20261030a">
+    <link rel="stylesheet" href="css/style.css?v=20261031a">
 
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c2b40b963024a48b41af28e77da9bd5"}'></script>
@@ -436,14 +437,14 @@
                 <p class="hero-affiliation">Postdoctoral Research Associate</p>
                 <p class="hero-institution">Sainsbury Laboratory, University of Cambridge</p>
                 <div class="hero-badges">
-                    <a href="https://www.ensa.ac.uk/" class="badge" target="_blank" rel="noopener" title="Enabling Nutrient Symbioses in Agriculture">Enabling Nutrient Symbioses (ENSA)</a>
+                    <a href="https://www.ensa.ac.uk/" class="badge" target="_blank" rel="noopener" title="Enabling Nutrient Symbioses in Agriculture">Enabling Nutrient Symbioses (ENSA)<span class="visually-hidden"> (opens in a new tab)</span></a>
                     <span class="badge">Root nodule symbiosis</span>
                     <span class="badge">CRISPR engineering</span>
                 </div>
                 <div class="hero-cta">
                     <a href="#research" class="btn btn-primary">View research</a>
                     <a href="#contact" class="btn btn-outline">Get in touch</a>
-                    <a href="Jawahar_Singh_CV.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download CV (PDF)</a>
+                    <a href="Jawahar_Singh_CV.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download CV (PDF)<span class="visually-hidden"> (opens in a new tab)</span></a>
                 </div>
             </div>
             <div class="hero-image">
@@ -527,7 +528,7 @@
                         </figcaption>
                     </figure>
 
-                    <p class="research-evidence"><strong>Evidence:</strong> <em>PvPHR-L7</em> RNAi increases nodulation and over-expression reduces it; recombinant PvPHR-L7 binds P1BS motifs in the <em>PvNIN</em> and <em>PvTML</em> promoters (EMSA); and it activates both promoters in <em>N.&nbsp;benthamiana</em> leaves. Full data in the <a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">paper</a>.</p>
+                    <p class="research-evidence"><strong>Evidence:</strong> <em>PvPHR-L7</em> RNAi increases nodulation and over-expression reduces it; recombinant PvPHR-L7 binds P1BS motifs in the <em>PvNIN</em> and <em>PvTML</em> promoters (EMSA); and it activates both promoters in <em>N.&nbsp;benthamiana</em> leaves. Full data in the <a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">paper<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
 
                     <!-- Takeaway -- sits inside the Phosphate-Nodulation card -->
                     <div class="key-takeaway key-takeaway-full fade-in">
@@ -539,7 +540,7 @@
 
                     <div class="research-row-footer">
                         <span class="card-tag">PHR-L7, <em>NIN</em> promoter, 2025</span>
-                        <a href="https://doi.org/10.1093/pcp/pcaf069" class="btn btn-outline" target="_blank" rel="noopener">Read the paper</a>
+                        <a href="https://doi.org/10.1093/pcp/pcaf069" class="btn btn-outline" target="_blank" rel="noopener">Read the paper<span class="visually-hidden"> (opens in a new tab)</span></a>
                     </div>
                 </article>
 
@@ -555,7 +556,7 @@
                         </div>
                     </div>
                     <p class="research-question">Which genes hold nitrogen fixation back in crop legumes, and can removing or retuning them make nodules work better?</p>
-                    <p class="research-row-text">In Prof. Sebastian Schornack's group at the Sainsbury Laboratory, as part of the international <a href="https://www.ensa.ac.uk/" target="_blank" rel="noopener">ENSA</a> programme (Enabling Nutrient Symbioses in Agriculture), I study conserved negative regulators of nitrogen fixation in cowpea and soybean.</p>
+                    <p class="research-row-text">In Prof. Sebastian Schornack's group at the Sainsbury Laboratory, as part of the international <a href="https://www.ensa.ac.uk/" target="_blank" rel="noopener">ENSA<span class="visually-hidden"> (opens in a new tab)</span></a> programme (Enabling Nutrient Symbioses in Agriculture), I study conserved negative regulators of nitrogen fixation in cowpea and soybean.</p>
                     <ul class="research-approach">
                         <li><strong>Find</strong> candidate regulators that are conserved across nodulating legumes.</li>
                         <li><strong>Edit</strong> them in cowpea and soybean with CRISPR-Cas9 knockouts and promoter fine-tuning.</li>
@@ -564,7 +565,7 @@
                     <p class="research-note">Work in progress: results will appear here once published.</p>
                     <div class="research-row-footer">
                         <span class="card-tag">Cowpea, soybean, CRISPR-Cas9</span>
-                        <a href="https://www.ensa.ac.uk/team/jawahar-singh/" class="btn btn-outline" target="_blank" rel="noopener">ENSA profile</a>
+                        <a href="https://www.ensa.ac.uk/team/jawahar-singh/" class="btn btn-outline" target="_blank" rel="noopener">ENSA profile<span class="visually-hidden"> (opens in a new tab)</span></a>
                     </div>
                 </article>
 
@@ -586,9 +587,9 @@
                 </a>
                 <div class="latest-body">
                     <p class="latest-label">Latest commentary, <em>MPMI</em> 2026</p>
-                    <h3 class="latest-title"><a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener">Secretory Circuits of Symbiosis in <em>Medicago truncatula</em></a></h3>
+                    <h3 class="latest-title"><a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener">Secretory Circuits of Symbiosis in <em>Medicago truncatula</em><span class="visually-hidden"> (opens in a new tab)</span></a></h3>
                     <p class="latest-text">With Ruby Tiwari, we discuss how a short promoter element, SOLE, switches on the signal peptidase complex only in nodules, and how NIN may read it.</p>
-                    <p class="latest-meta">Tiwari, R. &amp; <strong>Singh, J.</strong><br><a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-06-26-0051-CM</a></p>
+                    <p class="latest-meta">Tiwari, R. &amp; <strong>Singh, J.</strong><br><a href="https://doi.org/10.1094/MPMI-06-26-0051-CM" target="_blank" rel="noopener">doi.org/10.1094/MPMI-06-26-0051-CM<span class="visually-hidden"> (opens in a new tab)</span></a></p>
                 </div>
             </aside>
 
@@ -596,60 +597,60 @@
                 <div class="pub-item fade-in">
                     <span class="pub-year">2026</span>
                     <div class="pub-details">
-                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">Beyond Nitrogen: Phosphate Controls Root Nodule Symbiosis Commitment</a></h3>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">Beyond Nitrogen: Phosphate Controls Root Nodule Symbiosis Commitment<span class="visually-hidden"> (opens in a new tab)</span></a></h3>
                         <p class="pub-authors"><strong>Singh, J.</strong>, Vald&eacute;s-L&oacute;pez, O., &amp; Schornack, S. <em>Trends in Plant Science</em></p>
                         <p class="pub-impact">Perspective on how phosphate status controls the decision to nodulate</p>
-                        <p class="pub-doi"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">doi.org/10.1016/j.tplants.2026.01.001</a></p>
+                        <p class="pub-doi"><a href="https://doi.org/10.1016/j.tplants.2026.01.001" target="_blank" rel="noopener">doi.org/10.1016/j.tplants.2026.01.001<span class="visually-hidden"> (opens in a new tab)</span></a></p>
                     </div>
                 </div>
 
                 <div class="pub-item fade-in">
                     <span class="pub-year">2025</span>
                     <div class="pub-details">
-                        <h3 class="pub-title"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">Phosphate deficiency reduces nodule formation through a phosphate starvation response-like protein in <em>Phaseolus vulgaris</em></a></h3>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">Phosphate deficiency reduces nodule formation through a phosphate starvation response-like protein in <em>Phaseolus vulgaris</em><span class="visually-hidden"> (opens in a new tab)</span></a></h3>
                         <p class="pub-authors"><strong>Singh, J.</strong>, Mendoza-Soto, A. B., Tiwari, M., et al. <em>Plant and Cell Physiology</em></p>
                         <p class="pub-impact">PvPHR-L7 binds the <em>NIN</em> promoter and limits nodulation under low phosphate</p>
-                        <p class="pub-doi"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcaf069</a></p>
+                        <p class="pub-doi"><a href="https://doi.org/10.1093/pcp/pcaf069" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcaf069<span class="visually-hidden"> (opens in a new tab)</span></a></p>
                     </div>
                 </div>
 
                 <div class="pub-item fade-in">
                     <span class="pub-year">2023</span>
                     <div class="pub-details">
-                        <h3 class="pub-title"><a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener">Harnessing the potential of symbiotic associations of plants in phosphate-deficient soil for sustainable agriculture</a></h3>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener">Harnessing the potential of symbiotic associations of plants in phosphate-deficient soil for sustainable agriculture<span class="visually-hidden"> (opens in a new tab)</span></a></h3>
                         <p class="pub-authors"><strong>Singh, J.</strong>, Isidra-Arellano, M.C., &amp; Vald&eacute;s-L&oacute;pez, O. <em>Plant and Cell Physiology</em></p>
                         <p class="pub-impact">Review on symbiotic strategies for phosphate-poor soils</p>
-                        <p class="pub-doi"><a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcad059</a></p>
+                        <p class="pub-doi"><a href="https://doi.org/10.1093/pcp/pcad059" target="_blank" rel="noopener">doi.org/10.1093/pcp/pcad059<span class="visually-hidden"> (opens in a new tab)</span></a></p>
                     </div>
                 </div>
 
                 <div class="pub-item fade-in">
                     <span class="pub-year">2023</span>
                     <div class="pub-details">
-                        <h3 class="pub-title"><a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener">Role of Nod factor receptors and its allies involved in nitrogen fixation</a></h3>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener">Role of Nod factor receptors and its allies involved in nitrogen fixation<span class="visually-hidden"> (opens in a new tab)</span></a></h3>
                         <p class="pub-authors"><strong>Singh, J.</strong> &amp; Verma, P. K. <em>Planta</em></p>
                         <p class="pub-impact">Review on Nod factor receptor signalling</p>
-                        <p class="pub-doi"><a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener">doi.org/10.1007/s00425-023-04090-7</a></p>
+                        <p class="pub-doi"><a href="https://doi.org/10.1007/s00425-023-04090-7" target="_blank" rel="noopener">doi.org/10.1007/s00425-023-04090-7<span class="visually-hidden"> (opens in a new tab)</span></a></p>
                     </div>
                 </div>
 
                 <div class="pub-item fade-in">
                     <span class="pub-year">2023</span>
                     <div class="pub-details">
-                        <h3 class="pub-title"><a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener">Discovering the genetic modules controlling root nodule symbiosis under abiotic stresses: salinity as a case study</a></h3>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener">Discovering the genetic modules controlling root nodule symbiosis under abiotic stresses: salinity as a case study<span class="visually-hidden"> (opens in a new tab)</span></a></h3>
                         <p class="pub-authors"><strong>Singh, J.</strong> &amp; Vald&eacute;s-L&oacute;pez, O. <em>New Phytologist</em></p>
                         <p class="pub-impact">Salinity as a case study of nodulation under abiotic stress</p>
-                        <p class="pub-doi"><a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener">doi.org/10.1111/nph.18627</a></p>
+                        <p class="pub-doi"><a href="https://doi.org/10.1111/nph.18627" target="_blank" rel="noopener">doi.org/10.1111/nph.18627<span class="visually-hidden"> (opens in a new tab)</span></a></p>
                     </div>
                 </div>
 
                 <div class="pub-item fade-in">
                     <span class="pub-year">2022</span>
                     <div class="pub-details">
-                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">Genome-wide identification, expression, and characterization of CaLysM-RLKs in chickpea root nodule symbiosis</a></h3>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">Genome-wide identification, expression, and characterization of CaLysM-RLKs in chickpea root nodule symbiosis<span class="visually-hidden"> (opens in a new tab)</span></a></h3>
                         <p class="pub-authors"><strong>Singh, J.</strong> &amp; Verma, P. K. <em>Environmental and Experimental Botany</em></p>
                         <p class="pub-impact">Identified 17 LysM-RLKs governing Nod factor perception in chickpea</p>
-                        <p class="pub-doi"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">doi.org/10.1016/j.envexpbot.2022.104999</a></p>
+                        <p class="pub-doi"><a href="https://doi.org/10.1016/j.envexpbot.2022.104999" target="_blank" rel="noopener">doi.org/10.1016/j.envexpbot.2022.104999<span class="visually-hidden"> (opens in a new tab)</span></a></p>
                     </div>
                 </div>
             </div>
@@ -658,7 +659,7 @@
                 <p>Also 8 MPMI editorials, 8 book chapters and other co-authored papers.</p>
                 <div class="pub-more-actions">
                     <a href="publications.html" class="btn btn-primary">Full publication list</a>
-                    <a href="https://scholar.google.com/citations?user=mANYUGQAAAAJ&amp;hl=en" class="btn btn-outline" target="_blank" rel="noopener">Google Scholar</a>
+                    <a href="https://scholar.google.com/citations?user=mANYUGQAAAAJ&amp;hl=en" class="btn btn-outline" target="_blank" rel="noopener">Google Scholar<span class="visually-hidden"> (opens in a new tab)</span></a>
                 </div>
             </div>
         </div>
@@ -685,7 +686,7 @@
                     <div class="timeline-content">
                         <span class="timeline-date">2023&ndash;Present</span>
                         <h3>Sainsbury Laboratory, University of Cambridge, UK</h3>
-                        <p>Postdoctoral Research Associate with <strong>Prof. Sebastian Schornack</strong> (<a href="https://www.ensa.ac.uk/" target="_blank" rel="noopener">ENSA</a>). CRISPR engineering of cowpea and soybean to improve nitrogen fixation, and functional genomics of nodule development.</p>
+                        <p>Postdoctoral Research Associate with <strong>Prof. Sebastian Schornack</strong> (<a href="https://www.ensa.ac.uk/" target="_blank" rel="noopener">ENSA<span class="visually-hidden"> (opens in a new tab)</span></a>). CRISPR engineering of cowpea and soybean to improve nitrogen fixation, and functional genomics of nodule development.</p>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
@@ -860,31 +861,31 @@
                     <a href="Jawahar_Singh_CV.pdf" class="social-link" target="_blank" rel="noopener">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
                         Curriculum Vitae (PDF)
-                    </a>
+                    <span class="visually-hidden"> (opens in a new tab)</span></a>
                     <a href="https://www.slcu.cam.ac.uk/people/jawahar-singh" class="social-link" target="_blank" rel="noopener">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
                         Cambridge Profile
-                    </a>
+                    <span class="visually-hidden"> (opens in a new tab)</span></a>
                     <a href="https://scholar.google.com/citations?user=mANYUGQAAAAJ&amp;hl=en" class="social-link" target="_blank" rel="noopener">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
                         Google Scholar
-                    </a>
+                    <span class="visually-hidden"> (opens in a new tab)</span></a>
                     <a href="https://orcid.org/0000-0003-4893-741X" class="social-link" target="_blank" rel="noopener">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.834-1.209-3.722-3.853-3.722h-2.466z"/></svg>
                         ORCID
-                    </a>
+                    <span class="visually-hidden"> (opens in a new tab)</span></a>
                     <a href="https://www.linkedin.com/in/jawahar-singh-phd-57892068/" class="social-link" target="_blank" rel="noopener">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         LinkedIn
-                    </a>
+                    <span class="visually-hidden"> (opens in a new tab)</span></a>
                     <a href="https://twitter.com/IamJawaharSingh" class="social-link" target="_blank" rel="noopener">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         Twitter / X
-                    </a>
+                    <span class="visually-hidden"> (opens in a new tab)</span></a>
                     <a href="https://www.researchgate.net/profile/Jawahar-Singh" class="social-link" target="_blank" rel="noopener">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016 0 .395.004.734.013 1.017a9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h.001c.027.134.064.279.111.435.243.745.65 1.305 1.213 1.681.565.377 1.255.564 2.073.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.59.156-.45.249-.95.276-1.498.014-.275.022-.658.022-1.115v-.92h-3.474v.92h.967v.391c0 .234-.004.391-.013.484a2.487 2.487 0 0 1-.114.572c-.1.298-.276.557-.514.715-.238.158-.555.235-.95.235-.405 0-.74-.087-.984-.265-.244-.178-.43-.434-.527-.756a2.96 2.96 0 0 1-.097-.456 7.394 7.394 0 0 1-.06-.6 26.804 26.804 0 0 1-.038-1.601c0-.602.014-1.064.045-1.394.018-.166.043-.32.077-.456.094-.323.275-.582.518-.762.243-.18.575-.273.978-.273.405 0 .72.084.953.249.232.166.395.392.488.679.043.13.07.27.084.41.014.142.022.323.022.541v.392h3.473v-.092c0-.305-.013-.587-.044-.847a4.41 4.41 0 0 0-.179-.85 3.49 3.49 0 0 0-.39-.85 3.6 3.6 0 0 0-.673-.747 3.27 3.27 0 0 0-1.04-.566c-.41-.13-.872-.196-1.387-.196zM8.217 5.667c-1.005 0-1.92.183-2.74.55-.821.366-1.52.872-2.097 1.518a6.74 6.74 0 0 0-1.32 2.232c-.308.852-.461 1.755-.461 2.71v.06c0 .955.153 1.858.46 2.71.31.853.748 1.597 1.32 2.232.578.646 1.277 1.152 2.098 1.518.82.367 1.735.55 2.74.55.998 0 1.91-.183 2.732-.55.82-.366 1.52-.872 2.097-1.518a6.74 6.74 0 0 0 1.32-2.232c.308-.852.46-1.755.46-2.71v-.06c0-.955-.152-1.858-.46-2.71a6.74 6.74 0 0 0-1.32-2.232c-.578-.646-1.277-1.152-2.097-1.518-.821-.367-1.734-.55-2.732-.55zm0 2.255c.51 0 .969.103 1.375.31.405.207.748.494 1.029.86.28.367.494.798.643 1.292.148.495.222 1.027.222 1.595v.06c0 .569-.074 1.1-.222 1.595-.149.494-.363.925-.643 1.292-.281.366-.624.653-1.03.86-.405.207-.864.31-1.374.31-.51 0-.97-.103-1.375-.31a3.16 3.16 0 0 1-1.03-.86 4.103 4.103 0 0 1-.643-1.292 5.554 5.554 0 0 1-.222-1.595v-.06c0-.568.074-1.1.222-1.595a4.103 4.103 0 0 1 .643-1.292 3.16 3.16 0 0 1 1.03-.86 3.066 3.066 0 0 1 1.375-.31z"/></svg>
                         ResearchGate
-                    </a>
+                    <span class="visually-hidden"> (opens in a new tab)</span></a>
                 </div>
             </div>
         </div>
