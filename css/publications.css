@@ -491,3 +491,48 @@
         -webkit-hyphens: manual;
     }
 }
+
+/* ===== Phone layout (11 Nov 2026, checked at 375 px) =====
+   Bold titles do not justify well in a 335 px column, figures are capped so
+   the list stays scannable, and the filter tabs get a 44 px tap height. */
+@media (max-width: 640px) {
+    .pub-entry-title,
+    .fp-title {
+        text-align: left;
+        hyphens: manual;
+        -webkit-hyphens: manual;
+        text-wrap: balance;
+    }
+
+    .pub-entry-fig img {
+        max-height: 15rem;
+    }
+
+    .pub-search {
+        min-height: 44px;
+        text-overflow: ellipsis;
+    }
+    .pub-search::placeholder {
+        font-size: 0.875rem;
+    }
+
+    .pub-facets {
+        gap: 0 16px;
+    }
+    .pub-facet {
+        min-height: 44px;
+        padding: 10px 0;
+    }
+
+    .pub-year-group,
+    .pub-year-section {
+        padding-top: 18px;
+    }
+    .pub-entry {
+        margin-bottom: 26px;
+    }
+    .pub-part-title-all {
+        margin-top: 48px;
+        padding-top: 32px;
+    }
+}

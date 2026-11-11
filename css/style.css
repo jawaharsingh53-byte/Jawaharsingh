@@ -2674,3 +2674,163 @@ html:not(.js) .fade-in {
 .program-number {
     color: var(--text-light);
 }
+
+/* =====================================================================
+   Phone layout (11 Nov 2026, checked at 375 px)
+   Cards kept their desktop padding on phones, so text ran in a 238 px
+   column. These rules give the width back to the text, left-align the
+   copy that sits inside cards (justifying a column that narrow opens
+   wide word gaps), and shorten the hero.
+   ===================================================================== */
+@media (max-width: 640px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .section {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    /* Tap targets: 44 px */
+    .nav-toggle,
+    .theme-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    .nav-toggle {
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hero: less air, chips on one or two rows, species as a compact 2 x 2 list */
+    .hero {
+        padding-bottom: 28px;
+    }
+    .hero-content {
+        gap: 24px;
+    }
+    .hero-badges {
+        gap: 6px;
+    }
+    .badge {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0;
+    }
+    .hero-stats {
+        padding: 24px 0;
+    }
+    .crop-strip-label {
+        margin-bottom: 14px;
+    }
+    .stats-grid-crops {
+        gap: 14px 8px;
+    }
+    .stat-crop {
+        display: grid;
+        grid-template-columns: 40px minmax(0, 1fr);
+        column-gap: 8px;
+        align-items: center;
+        text-align: left;
+    }
+    .stat-crop picture {
+        grid-row: 1 / span 2;
+    }
+    .stat-crop img {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        border-width: 2px;
+    }
+    .stat-crop .stat-label {
+        align-self: end;
+        font-size: 0.875rem;
+        letter-spacing: 0;
+    }
+    .stat-latin {
+        align-self: start;
+        margin-top: 0;
+        font-size: 0.8125rem;
+    }
+
+    /* Research cards: phone padding, title on its own full-width line */
+    .research-stack {
+        gap: 28px;
+    }
+    .research-row,
+    .research-row-compact {
+        padding: 24px 20px;
+    }
+    .research-row-head {
+        gap: 0;
+        margin-bottom: 14px;
+    }
+    .research-row-head .card-icon {
+        display: none;
+    }
+    .research-row-head h3 {
+        font-size: 1.4rem;
+    }
+
+    /* The diagram runs to the card edges so its labels stay legible */
+    .abstract-figure {
+        margin: 20px -20px;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+    }
+    .abstract-caption-half {
+        padding: 12px 20px;
+        font-size: 0.9375rem;
+    }
+
+    .key-takeaway,
+    .key-takeaway-full {
+        padding: 20px 18px;
+        gap: 12px;
+    }
+    .takeaway-icon {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+
+    /* Timeline: thinner rail, more room for the text */
+    .timeline {
+        padding-left: 28px;
+    }
+    .timeline::before {
+        left: 7px;
+    }
+    .timeline-marker {
+        left: -28px;
+        width: 16px;
+        height: 16px;
+        top: 8px;
+    }
+    .timeline-item {
+        margin-bottom: 24px;
+    }
+    .timeline-content,
+    .program-card,
+    .teaching-card,
+    .service-item {
+        padding: 18px 16px;
+    }
+
+    /* Copy inside cards reads ragged-right on phones; the hero, About and
+       Future Lab paragraphs use the full width and stay justified */
+    .research-row-text,
+    .research-evidence,
+    .research-approach li,
+    .timeline-content p,
+    .program-card p,
+    .teaching-card p,
+    .service-item p,
+    .latest-text {
+        text-align: left;
+        hyphens: manual;
+        -webkit-hyphens: manual;
+    }
+}
