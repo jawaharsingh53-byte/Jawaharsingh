@@ -150,3 +150,50 @@
     var el = document.getElementById('copyrightYear');
     if (el) el.textContent = new Date().getFullYear();
 })();
+
+// ===== Click counts for GoatCounter: CV downloads, papers, email, profiles =====
+// Does nothing until the GoatCounter script is on the page.
+(function () {
+    var profiles = {
+        'scholar.google.com': 'scholar',
+        'orcid.org': 'orcid',
+        'www.linkedin.com': 'linkedin',
+        'twitter.com': 'x',
+        'www.researchgate.net': 'researchgate',
+        'www.slcu.cam.ac.uk': 'cambridge-profile',
+        'www.ensa.ac.uk': 'ensa'
+    };
+
+    function eventName(link) {
+        if (link.protocol === 'mailto:') return 'email';
+        if (link.hostname === location.hostname && /\.pdf$/i.test(link.pathname)) return 'cv-download';
+        if (link.hostname === 'doi.org') return 'paper/' + link.pathname.slice(1);
+        if (profiles[link.hostname]) return 'profile/' + profiles[link.hostname];
+        return '';
+    }
+
+    // Paper title for the dashboard, without the screen-reader "(opens in a new tab)" cue
+    function paperTitle(link) {
+        var box = link.closest('.pub-entry, .fp-paper, .pub-item, .latest-callout');
+        var heading = box && box.querySelector('.pub-entry-title, .fp-title, .pub-title, h3');
+        if (!heading) return '';
+        var copy = heading.cloneNode(true);
+        copy.querySelectorAll('.visually-hidden').forEach(function (h) { h.remove(); });
+        return copy.textContent.replace(/\s+/g, ' ').trim();
+    }
+
+    function count(e) {
+        var link = e.target.closest && e.target.closest('a[href]');
+        if (!link || !window.goatcounter || !window.goatcounter.count) return;
+        var name = eventName(link);
+        if (!name) return;
+        window.goatcounter.count({
+            path: name,
+            title: name.indexOf('paper/') === 0 ? paperTitle(link) : '',
+            event: true
+        });
+    }
+
+    document.addEventListener('click', count);
+    document.addEventListener('auxclick', count);   // middle-click opens in a new tab
+})();
